@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Anurodh — Food Delivery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════
+/* ═══════════════════════════════════════
    DESIGN SYSTEM
-═══════════════════════════════════════════ */
+═══════════════════════════════════════ */
 :root {
   --bg:        #0D0D0D;
   --bg2:       #141414;
@@ -37,16 +37,11 @@ body {
   overflow-x: hidden;
 }
 
-/* ─── SCROLLBAR ─────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg2); }
 ::-webkit-scrollbar-thumb { background: var(--gold2); border-radius: 3px; }
 
-/* ─── TYPOGRAPHY ────────────────────── */
 h1,h2,h3 { font-family: 'Playfair Display', serif; }
-h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 900; }
-h2 { font-size: 1.6rem; font-weight: 700; }
-h3 { font-size: 1.1rem; font-weight: 700; }
 
 /* ─── NOISE OVERLAY ──────────────────── */
 body::before {
@@ -57,7 +52,6 @@ body::before {
   opacity: 0.4;
 }
 
-/* ─── LAYOUT ─────────────────────────── */
 #app { position: relative; z-index: 1; min-height: 100vh; }
 
 .view { display: none; min-height: 100vh; }
@@ -93,40 +87,16 @@ nav {
   transition: all 0.2s ease;
   letter-spacing: 0.3px;
 }
-.btn-gold {
-  background: var(--gold);
-  color: #0D0D0D;
-}
+.btn-gold { background: var(--gold); color: #0D0D0D; }
 .btn-gold:hover { background: var(--gold2); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(232,184,109,0.3); }
-
-.btn-outline {
-  background: transparent;
-  color: var(--gold);
-  border: 1.5px solid var(--gold);
-}
+.btn-outline { background: transparent; color: var(--gold); border: 1.5px solid var(--gold); }
 .btn-outline:hover { background: rgba(232,184,109,0.1); }
-
-.btn-ghost {
-  background: transparent;
-  color: var(--muted);
-  border: 1.5px solid var(--border);
-}
+.btn-ghost { background: transparent; color: var(--muted); border: 1.5px solid var(--border); }
 .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
-
-.btn-danger {
-  background: rgba(232,69,69,0.15);
-  color: var(--red);
-  border: 1.5px solid rgba(232,69,69,0.3);
-}
+.btn-danger { background: rgba(232,69,69,0.15); color: var(--red); border: 1.5px solid rgba(232,69,69,0.3); }
 .btn-danger:hover { background: rgba(232,69,69,0.25); }
-
-.btn-green {
-  background: rgba(76,175,120,0.2);
-  color: var(--green);
-  border: 1.5px solid rgba(76,175,120,0.3);
-}
+.btn-green { background: rgba(76,175,120,0.2); color: var(--green); border: 1.5px solid rgba(76,175,120,0.3); }
 .btn-green:hover { background: rgba(76,175,120,0.3); }
-
 .btn-sm { padding: 6px 14px; font-size: 0.8rem; }
 .btn-lg { padding: 14px 32px; font-size: 1rem; border-radius: 10px; }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none !important; }
@@ -135,123 +105,60 @@ nav {
 .input-group { display: flex; flex-direction: column; gap: 6px; }
 .input-group label { font-size: 0.8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
 input, select, textarea {
-  background: var(--bg3);
-  border: 1.5px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 16px;
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  transition: border-color 0.2s;
-  width: 100%;
+  background: var(--bg3); border: 1.5px solid var(--border); border-radius: 10px;
+  padding: 12px 16px; color: var(--text); font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem; transition: border-color 0.2s; width: 100%;
 }
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(232,184,109,0.1);
-}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(232,184,109,0.1); }
 select option { background: var(--bg3); }
 textarea { resize: vertical; min-height: 80px; }
 
 /* ─── CARDS ──────────────────────────── */
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-}
-.card-hover { transition: all 0.25s ease; cursor: pointer; }
-.card-hover:hover {
-  border-color: rgba(232,184,109,0.3);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
 
 /* ─── BADGE ──────────────────────────── */
-.badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 .badge-gold { background: rgba(232,184,109,0.15); color: var(--gold); border: 1px solid rgba(232,184,109,0.3); }
 .badge-green { background: rgba(76,175,120,0.15); color: var(--green); border: 1px solid rgba(76,175,120,0.3); }
 .badge-red { background: rgba(232,69,69,0.15); color: var(--red); border: 1px solid rgba(232,69,69,0.3); }
 .badge-muted { background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid var(--border); }
 
-/* ─── DIVIDER ────────────────────────── */
-.divider {
-  height: 1px; background: var(--border);
-  margin: 20px 0;
-}
+.divider { height: 1px; background: var(--border); margin: 20px 0; }
 
 /* ─── TOAST ──────────────────────────── */
-#toast-container {
-  position: fixed; bottom: 28px; right: 28px; z-index: 9999;
-  display: flex; flex-direction: column; gap: 10px;
-}
+#toast-container { position: fixed; bottom: 28px; right: 28px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
 .toast {
-  padding: 14px 20px;
-  border-radius: 10px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: var(--shadow);
-  animation: slideIn 0.3s ease;
-  min-width: 280px;
-  display: flex; align-items: center; gap: 10px;
+  padding: 14px 20px; border-radius: 10px; background: var(--card); border: 1px solid var(--border);
+  color: var(--text); font-size: 0.9rem; font-weight: 500; box-shadow: var(--shadow);
+  animation: slideIn 0.3s ease; min-width: 280px; display: flex; align-items: center; gap: 10px;
 }
 .toast.success { border-color: rgba(76,175,120,0.4); }
 .toast.error   { border-color: rgba(232,69,69,0.4); }
 .toast-icon { font-size: 1.1rem; }
-@keyframes slideIn {
-  from { transform: translateX(100px); opacity: 0; }
-  to   { transform: translateX(0); opacity: 1; }
-}
-@keyframes slideOut {
-  to { transform: translateX(100px); opacity: 0; }
-}
+@keyframes slideIn { from { transform: translateX(100px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideOut { to { transform: translateX(100px); opacity: 0; } }
 
 /* ─── MODAL ──────────────────────────── */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 500;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(4px);
-  display: none; align-items: center; justify-content: center;
-  padding: 20px;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+  display: none; align-items: center; justify-content: center; padding: 20px;
 }
 .modal-overlay.open { display: flex; }
 .modal {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 32px;
-  width: 100%; max-width: 480px;
-  box-shadow: var(--shadow);
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 18px; padding: 32px;
+  width: 100%; max-width: 480px; box-shadow: var(--shadow);
   animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
 }
-@keyframes modalIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
-}
-.modal-header {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  margin-bottom: 24px;
-}
+@keyframes modalIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.modal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
 .modal-close {
-  background: var(--bg3); border: none; color: var(--muted);
-  width: 32px; height: 32px; border-radius: 8px;
-  cursor: pointer; font-size: 1.1rem; transition: all 0.2s;
+  background: var(--bg3); border: none; color: var(--muted); width: 32px; height: 32px;
+  border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s;
   display: flex; align-items: center; justify-content: center;
 }
 .modal-close:hover { color: var(--text); background: rgba(255,255,255,0.1); }
 
-/* ─── GRID HELPERS ───────────────────── */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .flex-between { display: flex; justify-content: space-between; align-items: center; }
@@ -264,421 +171,437 @@ textarea { resize: vertical; min-height: 80px; }
 .text-sm    { font-size: 0.85rem; }
 .text-center { text-align: center; }
 
-/* ─── LOADING ────────────────────────── */
-.spinner {
-  display: inline-block; width: 22px; height: 22px;
-  border: 2px solid var(--border);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-}
+.spinner { display: inline-block; width: 22px; height: 22px; border: 2px solid var(--border); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.7s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-
-.empty-state {
-  text-align: center; padding: 48px 0; color: var(--muted);
-}
+.empty-state { text-align: center; padding: 48px 0; color: var(--muted); }
 .empty-state .icon { font-size: 2.5rem; margin-bottom: 12px; }
 
-/* ─── TABS ───────────────────────────── */
 .tabs { display: flex; gap: 4px; background: var(--bg3); padding: 4px; border-radius: 10px; }
-.tab {
-  flex: 1; padding: 9px; text-align: center; border-radius: 7px;
-  font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
-  color: var(--muted); border: none; background: none; font-family: 'DM Sans', sans-serif;
-}
+.tab { flex: 1; padding: 9px; text-align: center; border-radius: 7px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--muted); border: none; background: none; font-family: 'DM Sans', sans-serif; }
 .tab.active { background: var(--gold); color: #0D0D0D; }
 .tab:not(.active):hover { color: var(--text); background: rgba(255,255,255,0.05); }
 
-/* ═══════════════════════════════════════
-   VIEW: LANDING
-═══════════════════════════════════════ */
+/* ════════════════════════════════════════
+   VIEW: LANDING — CINEMATIC
+════════════════════════════════════════ */
 #view-landing {
-  background:
-    radial-gradient(ellipse 60% 50% at 70% 30%, rgba(232,184,109,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(232,69,69,0.05) 0%, transparent 50%),
-    var(--bg);
-}
-.landing-hero {
-  flex: 1; display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  padding: 60px 24px; text-align: center;
-}
-.landing-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -2px;
-  margin-bottom: 12px;
-}
-.landing-logo .accent { color: var(--gold); }
-.landing-tagline {
-  font-size: 1rem;
-  color: var(--muted);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 48px;
-}
-.landing-cards {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 20px; width: 100%; max-width: 560px;
-}
-.landing-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px; padding: 32px 24px;
-  cursor: pointer; transition: all 0.25s ease;
-  text-align: left;
-}
-.landing-card:hover {
-  border-color: rgba(232,184,109,0.4);
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-}
-.landing-card-icon { font-size: 2.2rem; margin-bottom: 14px; }
-.landing-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
-.landing-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
-.landing-footer {
-  padding: 20px; text-align: center;
-  font-size: 0.78rem; color: var(--muted);
-  border-top: 1px solid var(--border);
+  position: relative;
+  background: #0D0D0D; /* fallback if video fails */
+  overflow: hidden;
 }
 
-/* ═══════════════════════════════════════
-   VIEW: AUTH
-═══════════════════════════════════════ */
-#view-auth {
-  align-items: center; justify-content: center;
-  padding: 24px;
+/* ── VIDEO BACKGROUND ───────────────── */
+.video-bg-wrap {
+  position: absolute;
+  inset: 0; z-index: 0;
+  overflow: hidden;
+  /* starts invisible; JS fades it in once video is playing */
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+.video-bg-wrap.visible { opacity: 1; }
+
+/* The iframe is positioned & scaled to cover like object-fit:cover */
+.video-bg-wrap iframe {
+  position: absolute;
+  /* Oversized to hide letterbox bars */
+  top: 50%; left: 50%;
+  width: 177.8vh;   /* 16/9 × 100vh */
+  height: 56.25vw;  /* 9/16 × 100vw */
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
+}
+
+/* Dark scrim over video — keeps text legible while video shows through */
+.video-scrim {
+  position: absolute; inset: 0; z-index: 1;
   background:
-    radial-gradient(ellipse 50% 60% at 80% 20%, rgba(232,184,109,0.06) 0%, transparent 50%),
-    var(--bg);
+    /* Heavy vignette around edges */
+    radial-gradient(ellipse 80% 80% at 50% 50%, transparent 30%, rgba(0,0,0,0.65) 100%),
+    /* Solid dark base at ~72% opacity so video is subtle */
+    rgba(10, 9, 8, 0.72);
+  pointer-events: none;
 }
-.auth-box {
-  width: 100%; max-width: 440px;
+
+/* Warm gold gradient from the bottom — "grounds" the CTA button */
+.video-scrim::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to top, rgba(10,9,8,0.85) 0%, transparent 45%),
+    linear-gradient(to bottom, rgba(10,9,8,0.5) 0%, transparent 35%);
+  pointer-events: none;
 }
-.auth-back {
-  display: flex; align-items: center; gap: 8px;
-  color: var(--muted); font-size: 0.85rem; font-weight: 600;
-  cursor: pointer; margin-bottom: 32px; transition: color 0.2s;
-  border: none; background: none;
+
+/* Ambient radial glows — sit on top of scrim, add warmth */
+#view-landing::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 2;
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 42%, rgba(232,184,109,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 30% at 20% 80%, rgba(232,69,69,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 25% at 80% 15%, rgba(232,184,109,0.04) 0%, transparent 55%);
+  pointer-events: none;
 }
+
+/* Thin horizontal rule across the centre */
+.landing-horizon {
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  height: 1px;
+  z-index: 4;
+  background: linear-gradient(90deg, transparent 0%, rgba(232,184,109,0.12) 30%, rgba(232,184,109,0.12) 70%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ── HAMBURGER NAV ──────────────────── */
+.landing-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 300;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 28px 40px;
+  /* fades in as part of the reveal */
+  opacity: 0;
+  animation: fadeUp 1s ease 2.8s forwards;
+}
+
+.landing-nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem; font-weight: 900;
+  color: rgba(240,235,227,0.6);
+  letter-spacing: -0.5px;
+  user-select: none;
+}
+.landing-nav-logo em { color: var(--gold); font-style: normal; }
+
+/* Hamburger button */
+.hamburger-btn {
+  width: 44px; height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 5px;
+  transition: border-color 0.25s, background 0.25s;
+  position: relative;
+}
+.hamburger-btn:hover { border-color: rgba(232,184,109,0.35); background: rgba(232,184,109,0.06); }
+.hamburger-btn span {
+  display: block; width: 18px; height: 1.5px;
+  background: var(--muted);
+  border-radius: 2px;
+  transition: background 0.25s, transform 0.3s, opacity 0.3s, width 0.3s;
+  transform-origin: center;
+}
+.hamburger-btn:hover span { background: var(--gold); }
+.hamburger-btn.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); width: 18px; }
+.hamburger-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger-btn.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); width: 18px; }
+
+/* Dropdown */
+.hamburger-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 200px;
+  background: rgba(20,20,20,0.95);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  transform-origin: top right;
+}
+.hamburger-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.hamburger-menu-item {
+  display: flex; align-items: center; gap: 13px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background 0.18s;
+  border: none; background: transparent; width: 100%; text-align: left;
+  color: var(--text);
+}
+.hamburger-menu-item:hover { background: rgba(232,184,109,0.07); }
+.hamburger-menu-item:not(:last-child) { border-bottom: 1px solid var(--border); }
+.hmi-icon {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.hmi-text { display: flex; flex-direction: column; }
+.hmi-label { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+.hmi-sub   { font-size: 0.72rem; color: var(--muted); margin-top: 1px; }
+
+/* hamburger wrapper needs relative positioning for the dropdown */
+.hamburger-wrap { position: relative; }
+
+/* ── HERO CONTENT ───────────────────── */
+.landing-hero {
+  position: relative; z-index: 4;
+  flex: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+  text-align: center;
+  gap: 0;
+}
+
+/* The wordmark */
+.hero-wordmark {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4.5rem, 14vw, 10rem);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -4px;
+  color: var(--text);
+  text-shadow:
+    0 2px 40px rgba(0,0,0,0.8),
+    0 0 80px rgba(0,0,0,0.5);
+
+  /* Start invisible, animate in */
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+.hero-wordmark .w-gold { color: var(--gold); }
+.hero-wordmark .w-italic { font-style: italic; }
+
+/* Thin tagline under the wordmark */
+.hero-deco-line {
+  display: flex; align-items: center; gap: 18px;
+  margin-top: 28px;
+  opacity: 0;
+  animation: fadeUp 1s ease 1.1s forwards;
+}
+.hero-deco-line::before,
+.hero-deco-line::after {
+  content: '';
+  width: 48px; height: 1px;
+  background: rgba(232,184,109,0.3);
+}
+.hero-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* CTA button */
+.hero-cta-wrap {
+  margin-top: 52px;
+  opacity: 0;
+  animation: fadeUp 1s ease 1.8s forwards;
+}
+
+.hero-cta {
+  position: relative;
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  background: var(--gold);
+  color: #0D0D0D;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: -0.2px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease;
+  overflow: hidden;
+}
+.hero-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(232,184,109,0.35), 0 4px 12px rgba(0,0,0,0.4);
+  background: #edc07a;
+}
+.hero-cta:active { transform: translateY(-1px) scale(1.005); }
+
+.cta-arrow {
+  width: 28px; height: 28px;
+  background: rgba(0,0,0,0.12);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+}
+.hero-cta:hover .cta-arrow { transform: translateX(3px); }
+
+/* Subtle secondary text below CTA */
+.hero-secondary {
+  margin-top: 20px;
+  font-size: 0.78rem;
+  color: rgba(122,115,107,0.7);
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: fadeUp 1s ease 2.3s forwards;
+}
+
+/* Footer strip */
+.landing-footer {
+  position: relative; z-index: 4;
+  padding: 18px 40px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(122,115,107,0.5);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 3.2s forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* The hero wordmark has its own transform so override */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ════════════════════════════════════════
+   VIEW: AUTH
+════════════════════════════════════════ */
+#view-auth {
+  align-items: center; justify-content: center; padding: 24px;
+  background: radial-gradient(ellipse 50% 60% at 80% 20%, rgba(232,184,109,0.06) 0%, transparent 50%), var(--bg);
+}
+.auth-box { width: 100%; max-width: 440px; }
+.auth-back { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 0.85rem; font-weight: 600; cursor: pointer; margin-bottom: 32px; transition: color 0.2s; border: none; background: none; }
 .auth-back:hover { color: var(--text); }
-.auth-title { margin-bottom: 6px; }
+.auth-title { margin-bottom: 6px; font-size: 1.6rem; font-weight: 700; }
 .auth-subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 28px; }
 .auth-form { display: flex; flex-direction: column; gap: 16px; }
 .auth-tabs { margin-bottom: 24px; }
 .auth-switch { text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--muted); }
 .auth-switch a { color: var(--gold); cursor: pointer; font-weight: 600; text-decoration: none; }
 
-/* ═══════════════════════════════════════
+/* ════════════════════════════════════════
    VIEW: CUSTOMER DASHBOARD
-═══════════════════════════════════════ */
-.page-header {
-  padding: 32px 32px 0;
-  display: flex; justify-content: space-between; align-items: flex-start;
-  flex-wrap: wrap; gap: 16px;
-}
+════════════════════════════════════════ */
+.page-header { padding: 32px 32px 0; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
 .page-content { padding: 24px 32px; flex: 1; }
-.section-title {
-  font-size: 0.75rem; font-weight: 700; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 1.2px;
-  margin-bottom: 16px;
-}
+.section-title { font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 16px; }
 
-/* Restaurant grid */
-.restaurant-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 18px;
-}
-.rest-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-  cursor: pointer;
-  transition: all 0.25s;
-  position: relative;
-  overflow: hidden;
-}
-.rest-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--gold2));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
+.restaurant-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.rest-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; cursor: pointer; transition: all 0.25s; position: relative; overflow: hidden; }
+.rest-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold2)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
 .rest-card:hover { border-color: rgba(232,184,109,0.3); transform: translateY(-3px); box-shadow: var(--shadow); }
 .rest-card:hover::before { transform: scaleX(1); }
 .rest-card-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; }
 .rest-card-addr { font-size: 0.82rem; color: var(--muted); margin-bottom: 14px; line-height: 1.4; }
 .rest-card-footer { display: flex; justify-content: space-between; align-items: center; }
 
-/* Menu view */
 .menu-container { max-width: 900px; }
-.menu-section-label {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem; font-weight: 700;
-  color: var(--gold); margin-bottom: 12px; margin-top: 28px;
-  display: flex; align-items: center; gap: 10px;
-}
-.menu-section-label::after {
-  content: ''; flex: 1; height: 1px; background: var(--border);
-}
-.menu-item-card {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 16px 20px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  margin-bottom: 10px;
-  transition: border-color 0.2s;
-}
+.menu-section-label { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--gold); margin-bottom: 12px; margin-top: 28px; display: flex; align-items: center; gap: 10px; }
+.menu-section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.menu-item-card { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; transition: border-color 0.2s; }
 .menu-item-card:hover { border-color: rgba(232,184,109,0.2); }
 .menu-item-info .item-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
 .menu-item-info .item-desc { font-size: 0.8rem; color: var(--muted); }
 .menu-item-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .item-price { font-weight: 700; color: var(--gold); font-size: 1.05rem; }
 
-/* Cart sidebar */
-.customer-layout {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 24px;
-  align-items: start;
-}
-.cart-sidebar {
-  position: sticky; top: 80px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px;
-}
-.cart-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem; font-weight: 700;
-  margin-bottom: 16px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.cart-item {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
+.customer-layout { display: grid; grid-template-columns: 1fr 340px; gap: 24px; align-items: start; }
+.cart-sidebar { position: sticky; top: 80px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
+.cart-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
 .cart-item:last-child { border-bottom: none; }
 .cart-item-name { font-size: 0.88rem; font-weight: 600; margin-bottom: 2px; }
 .cart-item-price { font-size: 0.78rem; color: var(--muted); }
 .qty-control { display: flex; align-items: center; gap: 8px; }
-.qty-btn {
-  width: 28px; height: 28px; border-radius: 7px;
-  background: var(--bg3); border: 1px solid var(--border);
-  color: var(--text); font-size: 1rem; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: all 0.2s;
-}
+.qty-btn { width: 28px; height: 28px; border-radius: 7px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
 .qty-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
 .qty-num { font-size: 0.9rem; font-weight: 700; min-width: 20px; text-align: center; }
-.cart-total {
-  display: flex; justify-content: space-between;
-  padding: 14px 0 0;
-  font-weight: 700; font-size: 1.05rem;
-}
+.cart-total { display: flex; justify-content: space-between; padding: 14px 0 0; font-weight: 700; font-size: 1.05rem; }
 .cart-total .amount { color: var(--gold); }
 
-/* Order history */
-.order-row {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px 22px;
-  margin-bottom: 12px;
-  transition: border-color 0.2s;
-}
+.order-row { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; margin-bottom: 12px; transition: border-color 0.2s; }
 .order-row:hover { border-color: rgba(232,184,109,0.2); }
 .order-row-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
 .order-row-food { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
 
-/* ═══════════════════════════════════════
+/* ════════════════════════════════════════
    VIEW: RESTAURANT DASHBOARD
-═══════════════════════════════════════ */
-.stats-row {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 16px; margin-bottom: 28px;
-}
-.stat-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 20px;
-}
+════════════════════════════════════════ */
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-bottom: 28px; }
+.stat-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
 .stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
 .stat-value { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold); }
 
-.orders-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.orders-table th {
-  text-align: left; padding: 12px 16px;
-  font-size: 0.72rem; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 1px;
-  border-bottom: 1px solid var(--border);
-}
-.orders-table td {
-  padding: 14px 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-  font-size: 0.88rem;
-  vertical-align: middle;
-}
+.orders-table { width: 100%; border-collapse: collapse; }
+.orders-table th { text-align: left; padding: 12px 16px; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border); }
+.orders-table td { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.88rem; vertical-align: middle; }
 .orders-table tr:hover td { background: rgba(255,255,255,0.02); }
 
-/* Menu management */
-.manage-menu-card {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 18px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px; margin-bottom: 10px;
-  transition: border-color 0.2s;
-}
+.manage-menu-card { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; transition: border-color 0.2s; }
 .manage-menu-card:hover { border-color: rgba(232,184,109,0.2); }
 .mmc-left .item-name { font-weight: 600; font-size: 0.95rem; }
 .mmc-left .item-meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 .mmc-right { display: flex; align-items: center; gap: 12px; }
 .mmc-price { font-weight: 700; color: var(--gold); }
 
-/* ─── CHECKOUT MODAL ─────────────────── */
 .payment-options { display: flex; flex-direction: column; gap: 10px; }
-.payment-option {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 18px;
-  background: var(--bg3);
-  border: 1.5px solid var(--border);
-  border-radius: 10px; cursor: pointer; transition: all 0.2s;
-}
+.payment-option { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--bg3); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.2s; }
 .payment-option:hover { border-color: rgba(232,184,109,0.4); }
 .payment-option.selected { border-color: var(--gold); background: rgba(232,184,109,0.08); }
 .payment-option .icon { font-size: 1.3rem; }
 .payment-option .label { font-weight: 600; font-size: 0.9rem; }
 .payment-option .desc { font-size: 0.78rem; color: var(--muted); }
-.card-fields { display: none; margin-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+.card-fields { display: none; margin-top: 16px; flex-direction: column; gap: 12px; }
 
-/* ─── RESPONSIVE ─────────────────────── */
-@media (max-width: 768px) {
-  .landing-cards { grid-template-columns: 1fr; }
-  .customer-layout { grid-template-columns: 1fr; }
-  .cart-sidebar { position: static; }
-  .page-header, .page-content { padding-left: 20px; padding-right: 20px; }
-  .grid-2 { grid-template-columns: 1fr; }
-  nav { padding: 14px 20px; }
-}
-
-/* ─── ANIMATED LINE ─────────────────── */
-.gold-line {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 0 auto; width: 60px; margin-bottom: 20px;
-}
-
-/* ═══════════════════════════════════════
+/* ════════════════════════════════════════
    VIEW: DRIVER DASHBOARD
-═══════════════════════════════════════ */
-.driver-status-bar {
-  display: flex; align-items: center; gap: 14px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 16px 22px;
-  margin-bottom: 24px;
-}
-.driver-status-indicator {
-  width: 10px; height: 10px; border-radius: 50%;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 3px transparent;
-  transition: all 0.3s;
-}
-.driver-status-indicator.available {
-  background: var(--green);
-  box-shadow: 0 0 0 3px rgba(76,175,120,0.25);
-}
-.driver-status-indicator.busy {
-  background: var(--gold);
-  box-shadow: 0 0 0 3px rgba(232,184,109,0.25);
-}
-.driver-status-indicator.offline {
-  background: var(--muted);
-  box-shadow: 0 0 0 3px rgba(122,115,107,0.15);
-}
+════════════════════════════════════════ */
+.driver-status-bar { display: flex; align-items: center; gap: 14px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 22px; margin-bottom: 24px; }
+.driver-status-indicator { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 0 3px transparent; transition: all 0.3s; }
+.driver-status-indicator.available { background: var(--green); box-shadow: 0 0 0 3px rgba(76,175,120,0.25); }
+.driver-status-indicator.busy { background: var(--gold); box-shadow: 0 0 0 3px rgba(232,184,109,0.25); }
+.driver-status-indicator.offline { background: var(--muted); box-shadow: 0 0 0 3px rgba(122,115,107,0.15); }
 .driver-status-label { font-weight: 600; font-size: 0.9rem; }
 .driver-status-sub   { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 
-.driver-assignment-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 22px;
-  margin-bottom: 12px;
-  transition: border-color 0.2s;
-}
+.driver-assignment-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 12px; transition: border-color 0.2s; }
 .driver-assignment-card:hover { border-color: rgba(232,184,109,0.25); }
-.dac-header {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  margin-bottom: 12px;
-}
+.dac-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
 .dac-id  { font-size: 0.72rem; color: var(--muted); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
-.dac-route {
-  display: flex; gap: 10px; align-items: center;
-  font-size: 0.88rem; margin-bottom: 10px;
-}
+.dac-route { display: flex; gap: 10px; align-items: center; font-size: 0.88rem; margin-bottom: 10px; }
 .dac-route-arrow { color: var(--gold); font-size: 1rem; }
 .dac-items { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-.dac-footer {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-top: 14px; padding-top: 14px;
-  border-top: 1px solid var(--border);
-}
+.dac-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
 .dac-dispatch-time { font-size: 0.78rem; color: var(--muted); }
 
-/* Order confirmation banner */
-.order-confirm-banner {
-  background: rgba(76,175,120,0.08);
-  border: 1px solid rgba(76,175,120,0.25);
-  border-radius: var(--radius);
-  padding: 18px 22px;
-  margin-bottom: 16px;
-  display: flex; align-items: center; gap: 14px;
-}
-.order-confirm-icon { font-size: 1.8rem; }
-.order-confirm-title { font-weight: 700; font-size: 0.95rem; color: var(--green); }
-.order-confirm-sub   { font-size: 0.82rem; color: var(--muted); margin-top: 3px; }
+.driver-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(232,184,109,0.08); border: 1px solid rgba(232,184,109,0.2); border-radius: 20px; padding: 3px 10px; font-size: 0.75rem; font-weight: 600; color: var(--gold); margin-top: 6px; }
 
-/* Driver chip in order history */
-.driver-chip {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(232,184,109,0.08);
-  border: 1px solid rgba(232,184,109,0.2);
-  border-radius: 20px;
-  padding: 3px 10px;
-  font-size: 0.75rem; font-weight: 600; color: var(--gold);
-  margin-top: 6px;
-}
-
-/* Landing 3-col when driver card present */
-.landing-cards-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px; width: 100%; max-width: 820px;
-}
-@media (max-width: 768px) {
-  .landing-cards-3 { grid-template-columns: 1fr; }
-}
-
-/* Driver zone select in register */
-#driver-zone-group { display: none; }
-
-/* ═══════════════════════════════════════
-   RESTAURANT ANALYTICS
-═══════════════════════════════════════ */
+/* ════════════════════════════════════════
+   ANALYTICS
+════════════════════════════════════════ */
 .analytics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 28px; }
 .analytics-chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
 @media (max-width: 900px) { .analytics-chart-row { grid-template-columns: 1fr; } }
@@ -695,9 +618,9 @@ textarea { resize: vertical; min-height: 80px; }
 .driver-perf-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
 .driver-perf-row:last-child { border-bottom: none; }
 
-/* ═══════════════════════════════════════
-   ZONE MAP PICKER
-═══════════════════════════════════════ */
+/* ════════════════════════════════════════
+   ZONE MAP
+════════════════════════════════════════ */
 .zone-map-wrap { position: relative; width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: #141824; margin-bottom: 14px; }
 .zone-map-wrap svg { display: block; width: 100%; height: auto; }
 .zone-path { fill: rgba(232,184,109,0.06); stroke: rgba(232,184,109,0.25); stroke-width: 1.5; cursor: pointer; transition: fill 0.2s; }
@@ -711,24 +634,33 @@ textarea { resize: vertical; min-height: 80px; }
 .building-btn.active { border-color: var(--gold); background: rgba(232,184,109,0.1); color: var(--gold); }
 .addr-preview { background: var(--bg3); border-radius: 10px; padding: 10px 14px; font-size: 0.83rem; color: var(--muted); margin-bottom: 12px; min-height: 38px; }
 .addr-preview strong { color: var(--text); }
+#driver-zone-group { display: none; }
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .customer-layout { grid-template-columns: 1fr; }
+  .cart-sidebar { position: static; }
+  .page-header, .page-content { padding-left: 20px; padding-right: 20px; }
+  .grid-2 { grid-template-columns: 1fr; }
+  nav { padding: 14px 20px; }
+  .landing-nav { padding: 22px 24px; }
+  .hero-wordmark { letter-spacing: -2px; }
+}
 </style>
 </head>
 <body>
 <div id="app">
 
-  <!-- ══ TOAST CONTAINER ══════════════════ -->
+  <!-- TOAST -->
   <div id="toast-container"></div>
 
-  <!-- ══ MODALS ═══════════════════════════ -->
-
-  <!-- Cart Conflict Modal -->
+  <!-- ── MODALS ───────────────────────── -->
   <div class="modal-overlay" id="modal-cart-conflict">
     <div class="modal">
       <div class="modal-header">
-        <div>
-          <h3>New Restaurant?</h3>
-          <p class="text-muted text-sm mt-sm">Your cart has items from a different restaurant.</p>
-        </div>
+        <div><h3>New Restaurant?</h3><p class="text-muted text-sm mt-sm">Your cart has items from a different restaurant.</p></div>
         <button class="modal-close" onclick="closeModal('modal-cart-conflict')">✕</button>
       </div>
       <p style="margin-bottom:20px;font-size:0.9rem;color:var(--muted);">Starting a new cart will remove your current items. Continue?</p>
@@ -739,14 +671,10 @@ textarea { resize: vertical; min-height: 80px; }
     </div>
   </div>
 
-  <!-- Checkout Modal -->
   <div class="modal-overlay" id="modal-checkout">
     <div class="modal" style="max-width:520px">
       <div class="modal-header">
-        <div>
-          <h3>Checkout</h3>
-          <p class="text-muted text-sm mt-sm">Complete your order</p>
-        </div>
+        <div><h3>Checkout</h3><p class="text-muted text-sm mt-sm">Complete your order</p></div>
         <button class="modal-close" onclick="closeModal('modal-checkout')">✕</button>
       </div>
       <div id="checkout-summary" style="margin-bottom:20px;"></div>
@@ -773,7 +701,6 @@ textarea { resize: vertical; min-height: 80px; }
     </div>
   </div>
 
-  <!-- Add / Edit Menu Item Modal -->
   <div class="modal-overlay" id="modal-menu-item">
     <div class="modal">
       <div class="modal-header">
@@ -800,51 +727,76 @@ textarea { resize: vertical; min-height: 80px; }
   </div>
 
 
-  <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════
        VIEW: LANDING
-  ═══════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <div id="view-landing" class="view active">
-    <nav>
-      <div class="nav-brand">Anurodh<span>.</span></div>
-      <div class="nav-actions">
-        <button class="btn btn-ghost btn-sm" onclick="showAuth('customer','login')">Sign In</button>
-        <button class="btn btn-gold btn-sm" onclick="showAuth('customer','register')">Get Started</button>
-      </div>
-    </nav>
-    <div class="landing-hero">
-      <div class="landing-logo">Anu<span class="accent">rodh</span></div>
-      <p class="landing-tagline">Delivery · Delightful · Direct</p>
-      <div class="gold-line"></div>
-      <div class="landing-cards-3">
-        <div class="landing-card" onclick="showAuth('customer','login')">
-          <div class="landing-card-icon">🛍️</div>
-          <h3>I'm Hungry</h3>
-          <p>Browse restaurants, build your cart, and get food delivered to your door.</p>
-          <div class="mt-md"><span class="badge badge-gold">Customer →</span></div>
-        </div>
-        <div class="landing-card" onclick="showAuth('restaurant','login')">
-          <div class="landing-card-icon">🍳</div>
-          <h3>I'm a Restaurant</h3>
-          <p>Manage your menu, track incoming orders, and grow your delivery business.</p>
-          <div class="mt-md"><span class="badge badge-muted">Partner →</span></div>
-        </div>
-        <div class="landing-card" onclick="showAuth('driver','login')">
-          <div class="landing-card-icon">🛵</div>
-          <h3>I'm a Driver</h3>
-          <p>Pick up deliveries, track your assignments, and earn on your schedule.</p>
-          <div class="mt-md"><span class="badge badge-muted">Driver →</span></div>
+
+    <!-- YouTube video background (skips to 8s, muted, looped) -->
+    <div class="video-bg-wrap" id="video-bg-wrap">
+      <div class="video-scrim"></div>
+      <!-- YouTube iframe injected by JS after YT API ready -->
+      <div id="yt-player-container"></div>
+    </div>
+
+    <!-- Fixed nav with hamburger -->
+    <div class="landing-nav">
+      <div class="landing-nav-logo">Anu<em>rodh</em></div>
+
+      <div class="hamburger-wrap">
+        <button class="hamburger-btn" id="hamburger-btn" onclick="toggleHamburger()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="hamburger-menu" id="hamburger-menu">
+          <button class="hamburger-menu-item" onclick="showAuth('restaurant','login')">
+            <div class="hmi-text">
+              <span class="hmi-label">Partners</span>
+              <span class="hmi-sub">Restaurant portal</span>
+            </div>
+          </button>
+          <button class="hamburger-menu-item" onclick="showAuth('driver','login')">
+            <div class="hmi-text">
+              <span class="hmi-label">Couriers</span>
+              <span class="hmi-sub">Driver portal</span>
+            </div>
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- Hero -->
+    <div class="landing-hero">
+      <div class="landing-horizon"></div>
+
+      <h1 class="hero-wordmark">
+        Anu<span class="w-gold w-italic">rodh</span>
+      </h1>
+
+      <div class="hero-deco-line">
+        <span class="hero-eyebrow">Local flavors, delivered with care.</span>
+      </div>
+
+      <div class="hero-cta-wrap">
+        <button class="hero-cta" onclick="showAuth('customer','login')">
+          Let's make meals simpler
+          <span class="cta-arrow">→</span>
+        </button>
+      </div>
+
+      <p class="hero-secondary">Anytime &nbsp;·&nbsp; Fast &amp; Fresh</p>
+    </div>
+
     <div class="landing-footer">
-      25A Al Safa St, Kuwait City &nbsp;·&nbsp; Ph. 22276002 &nbsp;·&nbsp; © 2024 Anurodh Delivery Services
     </div>
   </div>
 
 
-  <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════
        VIEW: AUTH
-  ═══════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <div id="view-auth" class="view">
     <div class="auth-box">
       <button class="auth-back" onclick="showView('view-landing')">← Back</button>
@@ -856,14 +808,12 @@ textarea { resize: vertical; min-height: 80px; }
         <button class="tab" onclick="setAuthMode('register',this)">Register</button>
       </div>
 
-      <!-- Login Form -->
       <div id="auth-login-form" class="auth-form">
         <div class="input-group"><label>Email</label><input id="l-email" type="email" placeholder="you@example.com"></div>
         <div class="input-group"><label>Password</label><input id="l-pass" type="password" placeholder="••••••••"></div>
         <button class="btn btn-gold btn-lg" onclick="doLogin()" style="width:100%">Sign In</button>
       </div>
 
-      <!-- Register Form -->
       <div id="auth-reg-form" class="auth-form" style="display:none">
         <div class="input-group"><label id="reg-name-label">Your Name</label><input id="r-name" placeholder="Full name"></div>
         <div class="input-group"><label>Phone Number</label><input id="r-phone" type="tel" placeholder="e.g. 50001234"></div>
@@ -895,9 +845,9 @@ textarea { resize: vertical; min-height: 80px; }
   </div>
 
 
-  <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════
        VIEW: CUSTOMER DASHBOARD
-  ═══════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <div id="view-customer" class="view">
     <nav>
       <div class="nav-brand">Anurodh<span>.</span></div>
@@ -909,7 +859,6 @@ textarea { resize: vertical; min-height: 80px; }
       </div>
     </nav>
 
-    <!-- Sub-view: Restaurant List -->
     <div id="cust-view-restaurants" style="flex:1">
       <div class="page-header">
         <div><h2>Restaurants</h2><p class="text-muted text-sm mt-sm">Where do you want to order from today?</p></div>
@@ -921,7 +870,6 @@ textarea { resize: vertical; min-height: 80px; }
       </div>
     </div>
 
-    <!-- Sub-view: Menu + Cart -->
     <div id="cust-view-menu" style="display:none;flex:1">
       <div class="page-header">
         <div>
@@ -949,7 +897,6 @@ textarea { resize: vertical; min-height: 80px; }
       </div>
     </div>
 
-    <!-- Sub-view: Order History -->
     <div id="cust-view-orders" style="display:none;flex:1">
       <div class="page-header">
         <div><h2>Order History</h2><p class="text-muted text-sm mt-sm">Your past and current orders</p></div>
@@ -961,9 +908,9 @@ textarea { resize: vertical; min-height: 80px; }
   </div>
 
 
-  <!-- ══════════════════════════════════════
+  <!-- ══════════════════════════════════
        VIEW: RESTAURANT DASHBOARD
-  ═══════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <div id="view-restaurant" class="view">
     <nav>
       <div class="nav-brand">Anurodh<span>.</span></div>
@@ -976,30 +923,27 @@ textarea { resize: vertical; min-height: 80px; }
       </div>
     </nav>
 
-    <!-- Sub-view: Orders -->
     <div id="rest-view-orders" style="flex:1">
       <div class="page-header">
         <div><h2>Order Dashboard</h2><p class="text-muted text-sm mt-sm">Manage your incoming and completed orders</p></div>
       </div>
       <div class="page-content">
         <div class="stats-row" id="rest-stats"></div>
-        <div class="tabs" style="max-width:320px;margin-bottom:20px" id="order-tabs">
-          <button class="tab active" onclick="loadOrders('current',this)">🔥 Active Orders</button>
+        <div class="tabs" style="max-width:420px;margin-bottom:20px" id="order-tabs">
+          <button class="tab active" onclick="loadOrders('current',this)">🔥 Kitchen</button>
+          <button class="tab" onclick="loadOrders('transit',this)">🛵 In Transit</button>
           <button class="tab" onclick="loadOrders('previous',this)">✓ Completed</button>
         </div>
         <div id="orders-container"></div>
       </div>
     </div>
 
-    <!-- Sub-view: Analytics -->
     <div id="rest-view-analytics" style="display:none;flex:1">
       <div class="page-header">
         <div><h2>Analytics</h2><p class="text-muted text-sm mt-sm">Your restaurant performance at a glance</p></div>
       </div>
       <div class="page-content">
-        <!-- Summary stat cards -->
         <div class="analytics-grid" id="analytics-summary"></div>
-        <!-- Charts row -->
         <div class="analytics-chart-row">
           <div class="chart-card">
             <div class="chart-card-title">Revenue — Last 30 Days</div>
@@ -1010,7 +954,6 @@ textarea { resize: vertical; min-height: 80px; }
             <div class="donut-wrap" id="analytics-donut" style="height:110px"></div>
           </div>
         </div>
-        <!-- Top items + Driver table -->
         <div class="analytics-chart-row">
           <div class="chart-card">
             <div class="chart-card-title">Top 5 Items Ordered</div>
@@ -1024,7 +967,6 @@ textarea { resize: vertical; min-height: 80px; }
       </div>
     </div>
 
-    <!-- Sub-view: Menu Management -->
     <div id="rest-view-menu" style="display:none;flex:1">
       <div class="page-header">
         <div><h2>Manage Menu</h2><p class="text-muted text-sm mt-sm">Add, edit or remove dishes</p></div>
@@ -1036,9 +978,10 @@ textarea { resize: vertical; min-height: 80px; }
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
+
+  <!-- ══════════════════════════════════
        VIEW: DRIVER DASHBOARD
-  ═══════════════════════════════════════ -->
+  ══════════════════════════════════════ -->
   <div id="view-driver" class="view">
     <nav>
       <div class="nav-brand">Anurodh<span>.</span></div>
@@ -1051,14 +994,9 @@ textarea { resize: vertical; min-height: 80px; }
 
     <div id="driver-view-main" style="flex:1">
       <div class="page-header">
-        <div>
-          <h2>My Deliveries</h2>
-          <p class="text-muted text-sm mt-sm">Orders assigned to you right now</p>
-        </div>
+        <div><h2>My Deliveries</h2><p class="text-muted text-sm mt-sm">Orders assigned to you right now</p></div>
       </div>
       <div class="page-content" style="max-width:760px">
-
-        <!-- Status bar -->
         <div class="driver-status-bar">
           <div class="driver-status-indicator available" id="driver-status-dot"></div>
           <div>
@@ -1076,8 +1014,6 @@ textarea { resize: vertical; min-height: 80px; }
             </div>
           </div>
         </div>
-
-        <!-- Assignments -->
         <div class="section-title">Active Assignments</div>
         <div id="driver-orders-container">
           <div class="empty-state"><div class="spinner"></div></div>
@@ -1086,69 +1022,36 @@ textarea { resize: vertical; min-height: 80px; }
     </div>
   </div>
 
-  <!-- Zone Map Picker Modal -->
+  <!-- Zone Map Modal -->
   <div class="modal-overlay" id="modal-zone-map">
     <div class="modal" style="max-width:600px">
       <div class="modal-header">
-        <div>
-          <h3>Choose Your Location</h3>
-          <p class="text-muted text-sm mt-sm">Select your zone, then your building</p>
-        </div>
+        <div><h3>Choose Your Location</h3><p class="text-muted text-sm mt-sm">Select your zone, then your building</p></div>
         <button class="modal-close" onclick="closeModal('modal-zone-map')">✕</button>
       </div>
-
-      <!-- SVG Zone Map — Kuwait City style 5-zone grid -->
       <div class="zone-map-wrap">
         <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
-          <!-- North -->
-          <polygon class="zone-path" id="zone-North"
-            points="100,0 300,0 300,90 200,110 100,90"
-            onclick="selectZone('North')"/>
+          <polygon class="zone-path" id="zone-North" points="100,0 300,0 300,90 200,110 100,90" onclick="selectZone('North')"/>
           <text class="zone-svg-label" id="zlabel-North" x="200" y="52" text-anchor="middle">NORTH</text>
-
-          <!-- West -->
-          <polygon class="zone-path" id="zone-West"
-            points="0,80 100,90 200,110 160,200 0,200"
-            onclick="selectZone('West')"/>
+          <polygon class="zone-path" id="zone-West" points="0,80 100,90 200,110 160,200 0,200" onclick="selectZone('West')"/>
           <text class="zone-svg-label" id="zlabel-West" x="80" y="158" text-anchor="middle">WEST</text>
-
-          <!-- Central -->
-          <polygon class="zone-path" id="zone-Central"
-            points="100,90 300,90 300,180 160,200 200,110"
-            onclick="selectZone('Central')"/>
+          <polygon class="zone-path" id="zone-Central" points="100,90 300,90 300,180 160,200 200,110" onclick="selectZone('Central')"/>
           <text class="zone-svg-label" id="zlabel-Central" x="210" y="148" text-anchor="middle">CENTRAL</text>
-
-          <!-- East -->
-          <polygon class="zone-path" id="zone-East"
-            points="300,90 400,80 400,200 300,180"
-            onclick="selectZone('East')"/>
+          <polygon class="zone-path" id="zone-East" points="300,90 400,80 400,200 300,180" onclick="selectZone('East')"/>
           <text class="zone-svg-label" id="zlabel-East" x="332" y="150" text-anchor="middle">EAST</text>
-
-          <!-- South -->
-          <polygon class="zone-path" id="zone-South"
-            points="0,200 160,200 300,180 400,200 400,280 0,280"
-            onclick="selectZone('South')"/>
+          <polygon class="zone-path" id="zone-South" points="0,200 160,200 300,180 400,200 400,280 0,280" onclick="selectZone('South')"/>
           <text class="zone-svg-label" id="zlabel-South" x="200" y="248" text-anchor="middle">SOUTH</text>
-
-          <!-- Zone boundary lines for aesthetic grid feel -->
           <line x1="0" y1="0" x2="400" y2="0" stroke="rgba(232,184,109,0.15)" stroke-width="1"/>
           <line x1="0" y1="280" x2="400" y2="280" stroke="rgba(232,184,109,0.15)" stroke-width="1"/>
         </svg>
       </div>
-
-      <!-- Building picker (populated on zone select) -->
       <div class="section-title" id="building-section-title" style="display:none">Buildings in <span id="selected-zone-label"></span></div>
       <div class="building-list" id="building-list" style="display:none"></div>
-
-      <!-- Flat number input -->
       <div class="input-group" id="flat-input-group" style="display:none;margin-bottom:12px">
         <label>Flat / Unit Number</label>
         <input id="map-flat" placeholder="e.g. Flat 4B, Floor 2" oninput="updateAddrPreview()">
       </div>
-
-      <!-- Preview -->
       <div class="addr-preview" id="addr-preview">Select a zone on the map to begin.</div>
-
       <button class="btn btn-gold btn-lg" style="width:100%" onclick="confirmMapAddress()" id="btn-confirm-addr" disabled>Confirm Address</button>
     </div>
   </div>
@@ -1169,6 +1072,25 @@ let selectedPayment = 'card';
 let editingMenuItemId = null;
 
 /* ═══════════════════════════════════════════════
+   HAMBURGER
+═══════════════════════════════════════════════ */
+function toggleHamburger() {
+  const btn  = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('hamburger-menu');
+  const open = menu.classList.toggle('open');
+  btn.classList.toggle('open', open);
+}
+
+// Close hamburger when clicking outside
+document.addEventListener('click', e => {
+  const wrap = document.querySelector('.hamburger-wrap');
+  if (wrap && !wrap.contains(e.target)) {
+    document.getElementById('hamburger-menu').classList.remove('open');
+    document.getElementById('hamburger-btn').classList.remove('open');
+  }
+});
+
+/* ═══════════════════════════════════════════════
    VIEW MANAGEMENT
 ═══════════════════════════════════════════════ */
 function showView(id) {
@@ -1177,6 +1099,10 @@ function showView(id) {
 }
 
 function showAuth(role, mode) {
+  // Close hamburger if open
+  document.getElementById('hamburger-menu').classList.remove('open');
+  document.getElementById('hamburger-btn').classList.remove('open');
+
   currentRole = role;
   const titles = {
     customer:   ['Welcome Back',   'Sign in to order food'],
@@ -1189,10 +1115,8 @@ function showAuth(role, mode) {
   document.getElementById('reg-addr-label').textContent = role === 'restaurant' ? 'Pickup Address' : 'Delivery Address';
   document.getElementById('driver-zone-group').style.display = role === 'driver' ? 'flex' : 'none';
   document.getElementById('r-addr').closest('.input-group').style.display = role === 'driver' ? 'none' : 'flex';
-  // Map button only for customers
   const mapBtn = document.getElementById('btn-open-map');
   if (mapBtn) mapBtn.style.display = role === 'customer' ? 'inline-flex' : 'none';
-  // Customer address is set via map, so make it readonly only for customers
   document.getElementById('r-addr').readOnly = role === 'customer';
   document.getElementById('r-addr').placeholder = role === 'restaurant' ? 'Pickup address' : 'Use the map button →';
   setAuthMode(mode, document.querySelector(`#auth-mode-tabs .tab:${mode==='login'?'first':'last'}-child`));
@@ -1235,9 +1159,6 @@ function toast(msg, type='success') {
   setTimeout(() => { t.style.animation = 'slideOut 0.3s forwards'; setTimeout(()=>t.remove(),300); }, 3000);
 }
 
-/* ═══════════════════════════════════════════════
-   MODAL
-═══════════════════════════════════════════════ */
 function openModal(id)  { document.getElementById(id).classList.add('open'); }
 function closeModal(id) { document.getElementById(id).classList.remove('open'); }
 
@@ -1248,11 +1169,7 @@ async function doLogin() {
   const email = document.getElementById('l-email').value.trim();
   const password = document.getElementById('l-pass').value;
   if (!email || !password) { toast('Please fill all fields','error'); return; }
-  const endpoints = {
-    customer:   '/api/auth/customer/login',
-    restaurant: '/api/auth/restaurant/login',
-    driver:     '/api/auth/driver/login'
-  };
+  const endpoints = { customer: '/api/auth/customer/login', restaurant: '/api/auth/restaurant/login', driver: '/api/auth/driver/login' };
   const data = await api(endpoints[currentRole], { method:'POST', body:{email, password} });
   if (data.error) { toast(data.error,'error'); return; }
   currentUser = data.name;
@@ -1268,7 +1185,6 @@ async function doRegister() {
   const email    = document.getElementById('r-email').value.trim();
   const password = document.getElementById('r-pass').value;
   if (!name||!phone||!email||!password) { toast('All fields are required','error'); return; }
-
   let body, endpoint;
   if (currentRole === 'driver') {
     const zone = document.getElementById('r-zone').value;
@@ -1280,7 +1196,6 @@ async function doRegister() {
     endpoint = currentRole === 'restaurant' ? '/api/auth/restaurant/register' : '/api/auth/customer/register';
     body = { name, phone, email, address, password };
   }
-
   const data = await api(endpoint, { method:'POST', body });
   if (data.error) { toast(data.error,'error'); return; }
   currentUser = data.name;
@@ -1318,8 +1233,7 @@ function initCustDashboard() {
 }
 
 function custTab(tab) {
-  ['restaurants','menu','orders'].forEach(t =>
-    document.getElementById(`cust-view-${t}`).style.display = 'none');
+  ['restaurants','menu','orders'].forEach(t => document.getElementById(`cust-view-${t}`).style.display = 'none');
   document.getElementById(`cust-view-${tab}`).style.display = 'flex';
   if (tab === 'restaurants') loadRestaurants();
   if (tab === 'orders') loadOrderHistory();
@@ -1347,18 +1261,15 @@ async function openRestaurant(name, addr) {
   currentRestaurant = name;
   document.getElementById('menu-rest-name').textContent = name;
   document.getElementById('menu-rest-addr').textContent = '📍 ' + addr;
-  ['restaurants','menu','orders'].forEach(t =>document.getElementById(`cust-view-${t}`).style.display = 'none');
+  ['restaurants','menu','orders'].forEach(t => document.getElementById(`cust-view-${t}`).style.display = 'none');
   document.getElementById('cust-view-menu').style.display = 'flex';
-
   const container = document.getElementById('menu-items-container');
   container.innerHTML = '<div class="empty-state"><div class="spinner"></div></div>';
   const items = await api(`/api/restaurants/${encodeURIComponent(name)}/menu`);
   if (!items.length) { container.innerHTML = '<div class="empty-state"><div class="icon">🍽️</div><p>Menu coming soon</p></div>'; return; }
-
   const classIcons = { Appetizer:'🥗', Main:'🍽️', Dessert:'🍮', Drink:'🥤' };
   const grouped = {};
   items.forEach(i => { if (!grouped[i.class]) grouped[i.class] = []; grouped[i.class].push(i); });
-
   container.innerHTML = Object.entries(grouped).map(([cls, its]) => `
     <div class="menu-section-label">${classIcons[cls]||'•'} ${cls}</div>
     ${its.map(item => `
@@ -1375,7 +1286,6 @@ async function openRestaurant(name, addr) {
   `).join('');
 }
 
-/* ─── CART ──────────────────────────── */
 async function loadCart() {
   if (currentRole !== 'customer') return;
   const data = await api('/api/cart');
@@ -1384,30 +1294,22 @@ async function loadCart() {
 }
 
 function renderCart() {
-  const container = document.getElementById('cart-items');
-  const totalRow  = document.getElementById('cart-total-row');
-  const divider   = document.getElementById('cart-divider');
+  const container   = document.getElementById('cart-items');
+  const totalRow    = document.getElementById('cart-total-row');
+  const divider     = document.getElementById('cart-divider');
   const checkoutBtn = document.getElementById('btn-checkout');
   const countBadge  = document.getElementById('cart-count');
-
   if (!cartItems.length) {
     container.innerHTML = '<p class="text-muted text-sm">Your cart is empty</p>';
-    totalRow.style.display = 'none';
-    divider.style.display = 'none';
-    checkoutBtn.style.display = 'none';
-    countBadge.style.display = 'none';
-    return;
+    totalRow.style.display = 'none'; divider.style.display = 'none';
+    checkoutBtn.style.display = 'none'; countBadge.style.display = 'none'; return;
   }
   const total = cartItems.reduce((s,i) => s + i.qty * i.price, 0);
   const count = cartItems.reduce((s,i) => s + i.qty, 0);
-  countBadge.textContent = count;
-  countBadge.style.display = 'inline-block';
+  countBadge.textContent = count; countBadge.style.display = 'inline-block';
   container.innerHTML = cartItems.map(item => `
     <div class="cart-item">
-      <div>
-        <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-price">KWD ${item.price.toFixed(2)} each</div>
-      </div>
+      <div><div class="cart-item-name">${item.name}</div><div class="cart-item-price">KWD ${item.price.toFixed(2)} each</div></div>
       <div class="qty-control">
         <button class="qty-btn" onclick="changeQty(${item.cart_id},${item.qty-1})">−</button>
         <span class="qty-num">${item.qty}</span>
@@ -1415,19 +1317,13 @@ function renderCart() {
       </div>
     </div>`).join('');
   document.getElementById('cart-total-amt').textContent = `KWD ${total.toFixed(2)}`;
-  totalRow.style.display = 'flex';
-  divider.style.display = 'block';
-  checkoutBtn.style.display = 'block';
+  totalRow.style.display = 'flex'; divider.style.display = 'block'; checkoutBtn.style.display = 'block';
 }
 
 async function addToCart(item) {
-  const res = await api('/api/cart', {
-    method: 'POST',
-    body: { item_id: item.id, item_name: item.name, r_name: currentRestaurant, qty:1, price: item.price }
-  });
+  const res = await api('/api/cart', { method:'POST', body:{ item_id: item.id, item_name: item.name, r_name: currentRestaurant, qty:1, price: item.price } });
   if (res.error === 'cart_conflict') {
-    pendingCartItem = item;
-    openModal('modal-cart-conflict');
+    pendingCartItem = item; openModal('modal-cart-conflict');
     document.getElementById('btn-clear-cart-confirm').onclick = async () => {
       await api('/api/cart/clear', { method:'POST' });
       closeModal('modal-cart-conflict');
@@ -1441,11 +1337,8 @@ async function addToCart(item) {
 }
 
 async function changeQty(cartId, newQty) {
-  if (newQty < 1) {
-    await api(`/api/cart/${cartId}`, { method:'DELETE' });
-  } else {
-    await api(`/api/cart/${cartId}`, { method:'PUT', body:{ qty: newQty } });
-  }
+  if (newQty < 1) await api(`/api/cart/${cartId}`, { method:'DELETE' });
+  else await api(`/api/cart/${cartId}`, { method:'PUT', body:{ qty: newQty } });
   loadCart();
 }
 
@@ -1465,22 +1358,16 @@ function openCheckout() {
 
 function selectPayment(el) {
   document.querySelectorAll('.payment-option').forEach(p => p.classList.remove('selected'));
-  el.classList.add('selected');
-  selectedPayment = el.dataset.method;
+  el.classList.add('selected'); selectedPayment = el.dataset.method;
   document.getElementById('card-fields').style.display = selectedPayment === 'card' ? 'flex' : 'none';
 }
 
 async function placeOrder() {
-  // Derive zone from session — we store it at login time for customers too
   const zone = currentZone || 'North';
   const data = await api('/api/checkout', { method:'POST', body:{ payment: selectedPayment, zone } });
   if (data.error) { toast(data.error,'error'); return; }
-  closeModal('modal-checkout');
-  cartItems = [];
-  renderCart();
-  const driverMsg = data.driver && data.driver !== 'UNASSIGNED'
-    ? ` Driver: ${data.driver} 🛵`
-    : ' A driver will be assigned shortly.';
+  closeModal('modal-checkout'); cartItems = []; renderCart();
+  const driverMsg = data.driver && data.driver !== 'UNASSIGNED' ? ` Driver: ${data.driver} 🛵` : ' A driver will be assigned shortly.';
   toast(`Order #${data.order_id} placed 🎉${driverMsg}`);
   custTab('orders');
 }
@@ -1495,7 +1382,7 @@ async function loadOrderHistory() {
       <div class="order-row-header">
         <div>
           <span style="font-weight:700;font-size:0.95rem">${o.restaurant}</span>
-          <span class="badge ${o.status==='complete'?'badge-green':'badge-gold'}" style="margin-left:10px">${o.status}</span>
+          <span class="badge ${o.status==='complete'?'badge-green':o.status==='ready'?'badge-gold':o.status==='failed'?'badge-red':'badge-gold'}">${o.status==='complete'?'Delivered':o.status==='ready'?'Out for delivery':o.status==='incomplete'?'Preparing':o.status==='failed'?'Failed':o.status}</span>
         </div>
         <div style="text-align:right">
           <div class="text-gold" style="font-weight:700">KWD ${o.total.toFixed(2)}</div>
@@ -1517,10 +1404,7 @@ function initRestDashboard() {
 }
 
 function restTab(tab) {
-  ['orders','menu','analytics'].forEach(t => {
-    const el = document.getElementById(`rest-view-${t}`);
-    if (el) el.style.display = 'none';
-  });
+  ['orders','menu','analytics'].forEach(t => { const el = document.getElementById(`rest-view-${t}`); if (el) el.style.display = 'none'; });
   document.getElementById(`rest-view-${tab}`).style.display = 'flex';
   if (tab === 'orders')    loadOrders('current', document.querySelector('#order-tabs .tab'));
   if (tab === 'menu')      loadManageMenu();
@@ -1530,41 +1414,32 @@ function restTab(tab) {
 async function loadOrders(type, btn) {
   document.querySelectorAll('#order-tabs .tab').forEach(t => t.classList.remove('active'));
   if (btn) btn.classList.add('active');
-
   const container = document.getElementById('orders-container');
   container.innerHTML = '<div class="empty-state"><div class="spinner"></div></div>';
-
-  const [current, previous] = await Promise.all([
-    api('/api/restaurant/orders/current'),
-    type === 'current' ? Promise.resolve(null) : api('/api/restaurant/orders/previous')
-  ]);
-
-  // Stats
+  const current = await api('/api/restaurant/orders/current');
   document.getElementById('rest-stats').innerHTML = `
-    <div class="stat-card"><div class="stat-label">Active Orders</div><div class="stat-value">${current.length}</div></div>
+    <div class="stat-card"><div class="stat-label">In Kitchen</div><div class="stat-value">${current.length}</div></div>
     <div class="stat-card"><div class="stat-label">Revenue (Active)</div><div class="stat-value">KWD ${current.reduce((s,o)=>s+o.total,0).toFixed(0)}</div></div>`;
-
-  const orders = type === 'current' ? current : (await api('/api/restaurant/orders/previous'));
-  if (!orders.length) {
-    container.innerHTML = `<div class="empty-state"><div class="icon">${type==='current'?'🔥':'📋'}</div><p>No ${type} orders</p></div>`;
-    return;
-  }
-  container.innerHTML = `
-    <table class="orders-table">
-      <thead><tr>
-        <th>#</th><th>Customer</th><th>Items</th><th>Total</th><th>Date</th>${type==='current'?'<th>Action</th>':''}
-      </tr></thead>
-      <tbody>${orders.map(o=>`
-        <tr>
-          <td><span class="badge badge-muted">#${o.id}</span></td>
-          <td style="font-weight:600">${o.customer}</td>
-          <td style="color:var(--muted);font-size:0.82rem;max-width:260px">${o.food}</td>
-          <td class="text-gold" style="font-weight:700">KWD ${o.total.toFixed(2)}</td>
-          <td class="text-muted text-sm">${o.date}</td>
-          ${type==='current'?`<td><button class="btn btn-green btn-sm" onclick="markComplete(${o.id},this)">✓ Done</button></td>`:''}
-        </tr>`).join('')}
-      </tbody>
-    </table>`;
+  let orders;
+  if (type === 'current')  orders = current;
+  else if (type === 'transit') orders = await api('/api/restaurant/orders/dispatched');
+  else orders = await api('/api/restaurant/orders/previous');
+  if (!orders.length) { container.innerHTML = `<div class="empty-state"><div class="icon">${type==='current'?'🔥':type==='transit'?'🛵':'📋'}</div><p>No ${type} orders</p></div>`; return; }
+  container.innerHTML = `<table class="orders-table"><thead><tr>
+    <th>#</th><th>Customer</th><th>Items</th><th>Total</th><th>Date</th>
+    ${type==='transit'?'<th>Driver</th>':''}${type==='current'?'<th>Action</th>':''}${type==='previous'?'<th>Status</th>':''}
+  </tr></thead><tbody>${orders.map(o=>`
+    <tr>
+      <td><span class="badge badge-muted">#${o.id}</span></td>
+      <td style="font-weight:600">${o.customer}</td>
+      <td style="color:var(--muted);font-size:0.82rem;max-width:260px">${o.food}</td>
+      <td class="text-gold" style="font-weight:700">KWD ${o.total.toFixed(2)}</td>
+      <td class="text-muted text-sm">${o.date}</td>
+      ${type==='transit'?`<td style="font-size:0.85rem">🛵 ${o.driver}</td>`:''}
+      ${type==='current'?`<td><button class="btn btn-green btn-sm" onclick="markComplete(${o.id},this)">✓ Ready for Pickup</button></td>`:''}
+      ${type==='previous'?`<td><span class="badge ${o.status==='complete'?'badge-green':'badge-red'}">${o.status}</span></td>`:''}
+    </tr>`).join('')}
+  </tbody></table>`;
 }
 
 async function markComplete(ordId, btn) {
@@ -1580,20 +1455,14 @@ async function loadManageMenu() {
   container.innerHTML = '<div class="empty-state"><div class="spinner"></div></div>';
   const items = await api('/api/restaurant/menu');
   const classIcons = { Appetizer:'🥗', Main:'🍽️', Dessert:'🍮', Drink:'🥤' };
-  if (!items.length) {
-    container.innerHTML = '<div class="empty-state"><div class="icon">📋</div><p>No items yet. Add your first dish!</p></div>';
-    return;
-  }
+  if (!items.length) { container.innerHTML = '<div class="empty-state"><div class="icon">📋</div><p>No items yet. Add your first dish!</p></div>'; return; }
   const grouped = {};
   items.forEach(i => { if (!grouped[i.class]) grouped[i.class] = []; grouped[i.class].push(i); });
   container.innerHTML = Object.entries(grouped).map(([cls, its]) => `
     <div class="menu-section-label">${classIcons[cls]||'•'} ${cls}</div>
     ${its.map(item => `
       <div class="manage-menu-card">
-        <div class="mmc-left">
-          <div class="item-name">${item.name}</div>
-          <div class="item-meta">${item.description||'No description'}</div>
-        </div>
+        <div class="mmc-left"><div class="item-name">${item.name}</div><div class="item-meta">${item.description||'No description'}</div></div>
         <div class="mmc-right">
           <span class="mmc-price">KWD ${item.price.toFixed(2)}</span>
           <button class="btn btn-ghost btn-sm" onclick='openMenuItemModal(${JSON.stringify(item)})'>Edit</button>
@@ -1615,19 +1484,11 @@ function openMenuItemModal(item=null) {
 }
 
 async function saveMenuItem() {
-  const body = {
-    class: document.getElementById('mi-class').value,
-    name:  document.getElementById('mi-name').value.trim(),
-    description: document.getElementById('mi-desc').value.trim(),
-    price: document.getElementById('mi-price').value
-  };
+  const body = { class: document.getElementById('mi-class').value, name: document.getElementById('mi-name').value.trim(), description: document.getElementById('mi-desc').value.trim(), price: document.getElementById('mi-price').value };
   if (!body.name || !body.price) { toast('Name and price are required','error'); return; }
   let res;
-  if (editingMenuItemId) {
-    res = await api(`/api/restaurant/menu/${editingMenuItemId}`, { method:'PUT', body });
-  } else {
-    res = await api('/api/restaurant/menu', { method:'POST', body });
-  }
+  if (editingMenuItemId) res = await api(`/api/restaurant/menu/${editingMenuItemId}`, { method:'PUT', body });
+  else res = await api('/api/restaurant/menu', { method:'POST', body });
   if (res.error) { toast(res.error,'error'); return; }
   closeModal('modal-menu-item');
   toast(editingMenuItemId ? 'Item updated ✓' : 'Item added ✓');
@@ -1638,13 +1499,9 @@ async function deleteMenuItem(id) {
   if (!confirm('Delete this item?')) return;
   const res = await api(`/api/restaurant/menu/${id}`, { method:'DELETE' });
   if (res.error) { toast(res.error,'error'); return; }
-  toast('Item deleted');
-  loadManageMenu();
+  toast('Item deleted'); loadManageMenu();
 }
 
-/* ═══════════════════════════════════════════════
-   UTILS
-═══════════════════════════════════════════════ */
 function fmtCard(el) {
   let v = el.value.replace(/\D/g,'');
   el.value = v.match(/.{1,4}/g)?.join(' ') || v;
@@ -1658,9 +1515,7 @@ let driverIsOnline = true;
 function initDriverDashboard() {
   showView('view-driver');
   document.getElementById('driver-greeting').textContent = `Hi, ${currentUser} 🛵`;
-  loadDriverOrders();
-  loadDriverStats();
-  // Poll for new assignments every 30s
+  loadDriverOrders(); loadDriverStats();
   if (window._driverPoll) clearInterval(window._driverPoll);
   window._driverPoll = setInterval(loadDriverOrders, 30000);
 }
@@ -1668,12 +1523,10 @@ function initDriverDashboard() {
 async function loadDriverStats() {
   const dash = await api('/api/dashboard');
   if (dash.drivers && dash.drivers.length) {
-    // Find this driver's row — match by name since we have currentUser
     const me = dash.drivers.find(d => d.name === currentUser);
     if (me) {
       document.getElementById('driver-total-deliveries').textContent = me.total_deliveries;
-      document.getElementById('driver-avg-time').textContent = me.avg_delivery_min > 0
-        ? `${me.avg_delivery_min} min` : '—';
+      document.getElementById('driver-avg-time').textContent = me.avg_delivery_min > 0 ? `${me.avg_delivery_min} min` : '—';
     }
   }
 }
@@ -1682,29 +1535,48 @@ async function loadDriverOrders() {
   const container = document.getElementById('driver-orders-container');
   const orders = await api('/api/driver/orders');
   if (!orders || orders.error || !orders.length) {
-    container.innerHTML = `
-      <div class="empty-state">
-        <div class="icon">🛵</div>
-        <p>${driverIsOnline ? 'Waiting for assignments…' : 'You are offline'}</p>
-      </div>`;
+    container.innerHTML = `<div class="empty-state"><div class="icon">🛵</div><p>${driverIsOnline ? 'No active assignments right now' : 'You are offline'}</p></div>`;
     return;
   }
-  container.innerHTML = orders.map(o => `
-    <div class="driver-assignment-card">
+  container.innerHTML = orders.map(o => {
+    const isReady = o.status === 'ready';
+    return `<div class="driver-assignment-card" id="dac-${o.id}">
       <div class="dac-header">
         <span class="dac-id">Order #${o.id}</span>
+        <span class="badge ${isReady ? 'badge-green' : 'badge-gold'}">${isReady ? '✓ Ready for pickup' : '⏳ Being prepared'}</span>
         <span class="text-gold" style="font-weight:700">KWD ${o.total.toFixed(2)}</span>
       </div>
-      <div class="dac-route">
-        <span>🏪 <strong>${o.restaurant}</strong></span>
-        <span class="dac-route-arrow">→</span>
-        <span>🏠 ${o.customer}</span>
-      </div>
+      <div class="dac-route"><span>🏪 <strong>${o.restaurant}</strong></span><span class="dac-route-arrow">→</span><span>🏠 ${o.customer}</span></div>
       <div class="dac-items">${o.food}</div>
       <div class="dac-footer">
         <span class="dac-dispatch-time">Dispatched: ${o.dispatched || o.ordered}</span>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-green btn-sm" onclick="driverMarkDelivered(${o.id}, this)" ${!isReady ? 'disabled title="Wait for restaurant to mark ready"' : ''}>✓ Delivered</button>
+          <button class="btn btn-danger btn-sm" onclick="driverMarkFailed(${o.id}, this)">✕ Failed</button>
+        </div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
+}
+
+async function driverMarkDelivered(ordId, btn) {
+  btn.disabled = true; btn.textContent = '…';
+  const res = await api(`/api/driver/orders/${ordId}/delivered`, { method:'POST' });
+  if (res.error) { toast(res.error,'error'); btn.disabled=false; btn.textContent='✓ Delivered'; return; }
+  toast(`Order #${ordId} delivered! 🎉`);
+  document.getElementById(`dac-${ordId}`)?.remove();
+  loadDriverStats();
+  if (!document.querySelector('.driver-assignment-card')) loadDriverOrders();
+}
+
+async function driverMarkFailed(ordId, btn) {
+  if (!confirm('Mark this delivery as failed?')) return;
+  btn.disabled = true;
+  const res = await api(`/api/driver/orders/${ordId}/failed`, { method:'POST' });
+  if (res.error) { toast(res.error,'error'); btn.disabled=false; return; }
+  toast(`Order #${ordId} marked as failed.`,'info');
+  document.getElementById(`dac-${ordId}`)?.remove();
+  if (!document.querySelector('.driver-assignment-card')) loadDriverOrders();
 }
 
 async function toggleDriverStatus() {
@@ -1724,36 +1596,24 @@ async function toggleDriverStatus() {
 }
 
 /* ═══════════════════════════════════════════════
-   RESTAURANT ANALYTICS
+   ANALYTICS
 ═══════════════════════════════════════════════ */
 async function loadAnalytics() {
   const data = await api('/api/restaurant/analytics');
   if (data.error) { toast(data.error,'error'); return; }
-
   const s = data.summary;
-
-  // ── Summary cards ──────────────────────────────
   document.getElementById('analytics-summary').innerHTML = `
     <div class="stat-card"><div class="stat-label">Total Orders</div><div class="stat-value">${s.total_orders}</div></div>
     <div class="stat-card"><div class="stat-label">Total Revenue</div><div class="stat-value" style="font-size:1.4rem">KWD ${s.total_revenue.toFixed(2)}</div></div>
     <div class="stat-card"><div class="stat-label">Avg Order Value</div><div class="stat-value" style="font-size:1.4rem">KWD ${s.avg_order.toFixed(2)}</div></div>
     <div class="stat-card"><div class="stat-label">Completed</div><div class="stat-value" style="color:var(--green)">${s.completed}</div></div>
     <div class="stat-card"><div class="stat-label">Pending</div><div class="stat-value" style="color:var(--gold)">${s.pending}</div></div>`;
-
-  // ── Bar chart (revenue last 30 days) ───────────
   const barEl = document.getElementById('analytics-bar');
-  if (!data.daily.length) {
-    barEl.innerHTML = '<p class="text-muted text-sm">No data yet</p>';
-  } else {
+  if (!data.daily.length) { barEl.innerHTML = '<p class="text-muted text-sm">No data yet</p>'; }
+  else {
     const maxRev = Math.max(...data.daily.map(d => d.revenue), 1);
-    barEl.innerHTML = data.daily.map(d => `
-      <div class="bar-col">
-        <div class="bar-fill" style="height:${Math.round((d.revenue/maxRev)*100)}%" title="KWD ${d.revenue}"></div>
-        <div class="bar-label">${d.day}</div>
-      </div>`).join('');
+    barEl.innerHTML = data.daily.map(d => `<div class="bar-col"><div class="bar-fill" style="height:${Math.round((d.revenue/maxRev)*100)}%" title="KWD ${d.revenue}"></div><div class="bar-label">${d.day}</div></div>`).join('');
   }
-
-  // ── Donut (completed vs pending) ──────────────
   const total = s.completed + s.pending || 1;
   const pct   = Math.round((s.completed / total) * 100);
   const r = 40, cx = 55, cy = 55, circ = 2 * Math.PI * r;
@@ -1761,45 +1621,19 @@ async function loadAnalytics() {
   document.getElementById('analytics-donut').innerHTML = `
     <svg width="110" height="110" viewBox="0 0 110 110">
       <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="14"/>
-      <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--green)" stroke-width="14"
-        stroke-dasharray="${dash} ${circ}" stroke-dashoffset="${circ/4}" stroke-linecap="round"/>
-      <text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle"
-        fill="var(--gold)" font-size="14" font-family="Playfair Display,serif" font-weight="700">${pct}%</text>
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--green)" stroke-width="14" stroke-dasharray="${dash} ${circ}" stroke-dashoffset="${circ/4}" stroke-linecap="round"/>
+      <text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle" fill="var(--gold)" font-size="14" font-family="Playfair Display,serif" font-weight="700">${pct}%</text>
     </svg>
     <div class="donut-legend">
       <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div><span>${s.completed} Completed</span></div>
       <div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div><span>${s.pending} Pending</span></div>
     </div>`;
-
-  // ── Top items ──────────────────────────────────
   const itemsEl = document.getElementById('analytics-items');
-  if (!data.top_items.length) {
-    itemsEl.innerHTML = '<p class="text-muted text-sm">No completed orders yet</p>';
-  } else {
-    itemsEl.innerHTML = data.top_items.map((it,i) => `
-      <div class="driver-perf-row">
-        <div><span style="color:var(--gold);font-weight:700;margin-right:8px">#${i+1}</span>${it.name}</div>
-        <span class="badge badge-gold">${it.count}×</span>
-      </div>`).join('');
-  }
-
-  // ── Driver performance ─────────────────────────
+  if (!data.top_items.length) itemsEl.innerHTML = '<p class="text-muted text-sm">No completed orders yet</p>';
+  else itemsEl.innerHTML = data.top_items.map((it,i) => `<div class="driver-perf-row"><div><span style="color:var(--gold);font-weight:700;margin-right:8px">#${i+1}</span>${it.name}</div><span class="badge badge-gold">${it.count}×</span></div>`).join('');
   const drvEl = document.getElementById('analytics-drivers');
-  if (!data.drivers.length) {
-    drvEl.innerHTML = '<p class="text-muted text-sm">No deliveries yet</p>';
-  } else {
-    drvEl.innerHTML = data.drivers.map(d => `
-      <div class="driver-perf-row">
-        <div>
-          <div style="font-weight:600">${d.name}</div>
-          <div class="text-muted text-sm">${d.zone} zone</div>
-        </div>
-        <div style="text-align:right">
-          <div class="text-gold" style="font-weight:700">${d.deliveries} deliveries</div>
-          <div class="text-muted text-sm">${d.avg_min > 0 ? d.avg_min + ' min avg' : '—'}</div>
-        </div>
-      </div>`).join('');
-  }
+  if (!data.drivers.length) drvEl.innerHTML = '<p class="text-muted text-sm">No deliveries yet</p>';
+  else drvEl.innerHTML = data.drivers.map(d => `<div class="driver-perf-row"><div><div style="font-weight:600">${d.name}</div><div class="text-muted text-sm">${d.zone} zone</div></div><div style="text-align:right"><div class="text-gold" style="font-weight:700">${d.deliveries} deliveries</div><div class="text-muted text-sm">${d.avg_min > 0 ? d.avg_min + ' min avg' : '—'}</div></div></div>`).join('');
 }
 
 /* ═══════════════════════════════════════════════
@@ -1813,8 +1647,7 @@ const ZONE_BUILDINGS = {
   Central: ['Kuwait City Mall','Sharq Tower','Fahad Al Salem St','Al Hamra Tower','NBK HQ Block','Kuwait Municipality']
 };
 
-let selectedZone     = null;
-let selectedBuilding = null;
+let selectedZone = null, selectedBuilding = null;
 
 function openZoneMap() {
   selectedZone = null; selectedBuilding = null;
@@ -1835,14 +1668,12 @@ function selectZone(zone) {
   document.querySelectorAll('.zone-svg-label').forEach(l => l.classList.remove('active'));
   document.getElementById('zone-'+zone).classList.add('active');
   document.getElementById('zlabel-'+zone).classList.add('active');
-
   const buildings = ZONE_BUILDINGS[zone] || [];
   document.getElementById('selected-zone-label').textContent = zone;
   document.getElementById('building-section-title').style.display = 'block';
   const listEl = document.getElementById('building-list');
   listEl.style.display = 'grid';
-  listEl.innerHTML = buildings.map(b => `
-    <button class="building-btn" onclick="selectBuilding(this,'${b}')">${b}</button>`).join('');
+  listEl.innerHTML = buildings.map(b => `<button class="building-btn" onclick="selectBuilding(this,'${b}')">${b}</button>`).join('');
   document.getElementById('flat-input-group').style.display = 'none';
   document.getElementById('addr-preview').textContent = `Zone: ${zone} — select a building.`;
   document.getElementById('btn-confirm-addr').disabled = true;
@@ -1874,7 +1705,81 @@ function confirmMapAddress() {
   toast('Address set: ' + addr);
 }
 
-/* Init */
+/* ═══════════════════════════════════════════════
+   YOUTUBE VIDEO BACKGROUND
+   - Loads YT IFrame API
+   - Creates muted, autoplay player starting at 8s
+   - Fades the wrap in once video is actually playing
+   - Falls back silently to plain dark background on failure
+═══════════════════════════════════════════════ */
+(function() {
+  let ytPlayer = null;
+  let ytReady  = false;
+  let startSec = 8; // skip first 8 seconds
+
+  // Detect if we have a network at all — quick HEAD ping to YT
+  function tryLoadVideo() {
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    script.onerror = () => {}; // silently ignore — fallback is just the dark bg
+    document.head.appendChild(script);
+
+    // Safety timeout: if nothing happens in 6s, just stay dark
+    setTimeout(() => {
+      if (!ytReady) {
+        document.getElementById('video-bg-wrap').style.display = 'none';
+      }
+    }, 6000);
+  }
+
+  // YouTube API calls this when ready
+  window.onYouTubeIframeAPIReady = function() {
+    ytReady = true;
+    ytPlayer = new YT.Player('yt-player-container', {
+      videoId: 'ygJqkF3-n2w',
+      playerVars: {
+        autoplay:       1,
+        mute:           1,
+        loop:           1,
+        playlist:       'ygJqkF3-n2w', // required for loop
+        start:          startSec,
+        controls:       0,
+        disablekb:      1,
+        rel:            0,
+        showinfo:       0,
+        modestbranding: 1,
+        playsinline:    1,
+        iv_load_policy: 3,
+        enablejsapi:    1,
+      },
+      events: {
+        onReady: function(e) {
+          e.target.mute();
+          e.target.playVideo();
+        },
+        onStateChange: function(e) {
+          // YT.PlayerState.PLAYING === 1
+          if (e.data === 1) {
+            // Video is actually playing — fade it in
+            document.getElementById('video-bg-wrap').classList.add('visible');
+          }
+          // If ended somehow, restart from 8s (loop param handles this but just in case)
+          if (e.data === 0) {
+            e.target.seekTo(startSec, true);
+            e.target.playVideo();
+          }
+        },
+        onError: function() {
+          // Any error: hide the video wrap, dark bg shows
+          document.getElementById('video-bg-wrap').style.display = 'none';
+        }
+      }
+    });
+  };
+
+  tryLoadVideo();
+})();
+
 checkSession();
 </script>
 </body>
