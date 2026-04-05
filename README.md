@@ -1,4 +1,4 @@
-# 🍽️ Anurodh Food Delivery System
+# Anurodh Food Delivery System
 ### Oracle SQL*Plus + Flask + Web GUI
 
 ---
