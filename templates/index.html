@@ -13,7 +13,7 @@
 :root {
   --bg:        #F5F0E8;
   --bg2:       #3B3A38;
-  --bg3:       #1A1208;
+  --bg3:       #3B3A38;
   --card:      #3B3A38;
   --border:    rgba(255,255,255,0.08);
   --gold:      #A6BE60;
@@ -73,7 +73,7 @@ nav {
   color: var(--gold);
   letter-spacing: -0.5px;
 }
-.nav-brand span { color: var(--text); }
+.nav-brand span { color: var(--text2); }
 .nav-actions { display: flex; gap: 10px; align-items: center; }
 
 /* ─── BUTTONS ────────────────────────── */
@@ -93,7 +93,7 @@ nav {
 .btn-outline { background: transparent; color: var(--gold); border: 1.5px solid var(--gold); }
 .btn-outline:hover { background: rgba(166,190,96,0.1); }
 .btn-ghost { background: transparent; color: var(--muted); border: 1.5px solid var(--border); }
-.btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.btn-ghost:hover { color: var(--text2); border-color: rgba(255,255,255,0.2); }
 .btn-danger { background: rgba(232,69,69,0.15); color: var(--red); border: 1.5px solid rgba(232,69,69,0.3); }
 .btn-danger:hover { background: rgba(232,69,69,0.25); }
 .btn-green { background: rgba(197,217,122,0.2); color: var(--green); border: 1.5px solid rgba(197,217,122,0.3); }
@@ -107,7 +107,7 @@ nav {
 .input-group label { font-size: 0.8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
 input, select, textarea {
   background: var(--bg3); border: 1.5px solid var(--border); border-radius: 10px;
-  padding: 12px 16px; color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 12px 16px; color: var(--text2); font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.95rem; transition: border-color 0.2s; width: 100%;
 }
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(166,190,96,0.1); }
@@ -130,7 +130,7 @@ textarea { resize: vertical; min-height: 80px; }
 #toast-container { position: fixed; bottom: 28px; right: 28px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
 .toast {
   padding: 14px 20px; border-radius: 10px; background: var(--card); border: 1px solid var(--border);
-  color: var(--text); font-size: 0.9rem; font-weight: 500; box-shadow: var(--shadow);
+  color: var(--text2); font-size: 0.9rem; font-weight: 500; box-shadow: var(--shadow);
   animation: slideIn 0.3s ease; min-width: 280px; display: flex; align-items: center; gap: 10px;
 }
 .toast.success { border-color: rgba(76,175,120,0.4); }
@@ -158,7 +158,7 @@ textarea { resize: vertical; min-height: 80px; }
   border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s;
   display: flex; align-items: center; justify-content: center;
 }
-.modal-close:hover { color: var(--text); background: rgba(255,255,255,0.1); }
+.modal-close:hover { color: var(--text2); background: rgba(255,255,255,0.1); }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -180,7 +180,7 @@ textarea { resize: vertical; min-height: 80px; }
 .tabs { display: flex; gap: 4px; background: var(--bg3); padding: 4px; border-radius: 10px; }
 .tab { flex: 1; padding: 9px; text-align: center; border-radius: 7px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--muted); border: none; background: none; font-family: 'Plus Jakarta Sans', sans-serif; }
 .tab.active { background: var(--gold); color: #0D0D0D; }
-.tab:not(.active):hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.tab:not(.active):hover { color: var(--text2); background: rgba(255,255,255,0.05); }
 
 /* ════════════════════════════════════════
    SHARED VIDEO BACKGROUND (Landing + Auth)
@@ -323,7 +323,7 @@ textarea { resize: vertical; min-height: 80px; }
   cursor: pointer;
   transition: background 0.18s;
   border: none; background: transparent; width: 100%; text-align: left;
-  color: var(--text);
+  color: var(--text2);
 }
 .hamburger-menu-item:hover { background: rgba(166,190,96,0.07); }
 .hamburger-menu-item:not(:last-child) { border-bottom: 1px solid var(--border); }
@@ -337,7 +337,7 @@ textarea { resize: vertical; min-height: 80px; }
   flex-shrink: 0;
 }
 .hmi-text { display: flex; flex-direction: column; }
-.hmi-label { font-size: 0.88rem; font-weight: 600; color: var(--text); }
+.hmi-label { font-size: 0.88rem; font-weight: 600; color: var(--text2); }
 .hmi-sub   { font-size: 0.72rem; color: var(--muted); margin-top: 1px; }
 
 .hamburger-wrap { position: relative; }
@@ -360,7 +360,7 @@ textarea { resize: vertical; min-height: 80px; }
   font-weight: 900;
   line-height: 0.92;
   letter-spacing: -4px;
-  color: var(--text);
+  color: var(--text2);
   text-shadow:
     0 2px 40px rgba(0,0,0,0.8),
     0 0 80px rgba(0,0,0,0.5);
@@ -504,12 +504,12 @@ textarea { resize: vertical; min-height: 80px; }
   cursor: pointer; margin-bottom: 28px;
   transition: color 0.2s; border: none; background: none;
 }
-.auth-back:hover { color: var(--text); }
-.auth-title { margin-bottom: 6px; font-size: 1.6rem; font-weight: 700; }
+.auth-back:hover { color: var(--text2); }
+.auth-title { margin-bottom: 6px; font-size: 1.6rem; font-weight: 700; color: var(--text2); }
 .auth-subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 28px; }
 .auth-form { display: flex; flex-direction: column; gap: 16px; }
 .auth-tabs { margin-bottom: 24px; }
-.auth-switch { text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--muted); }
+.auth-switch { text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--text2); }
 .auth-switch a { color: var(--gold); cursor: pointer; font-weight: 600; text-decoration: none; }
 
 /* ════════════════════════════════════════
@@ -577,8 +577,8 @@ textarea { resize: vertical; min-height: 80px; }
   display: flex;
   flex-direction: column;
 }
-.rest-card-name { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 5px; }
-.rest-card-addr { font-size: 0.82rem; color: var(--muted); margin-bottom: 10px; line-height: 1.4; flex: 1; }
+.rest-card-name { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 5px; color: #F5F0E8; }
+.rest-card-addr { font-size: 0.82rem; color: #F5F0E8; opacity: 0.6; margin-bottom: 10px; line-height: 1.4; flex: 1; }
 .rest-card-footer { display: flex; justify-content: space-between; align-items: center; }
 
 /* ── Category chips on restaurant card ── */
@@ -613,7 +613,7 @@ textarea { resize: vertical; min-height: 80px; }
   font-family: 'Plus Jakarta Sans', sans-serif;
   transition: all 0.18s;
 }
-.filter-chip:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.filter-chip:hover { color: var(--text2); border-color: rgba(255,255,255,0.2); }
 .filter-chip.active { background: var(--gold); color: #0D0D0D; border-color: var(--gold); }
 .filter-chip.sort-chip { border-color: rgba(166,190,96,0.3); color: var(--gold); }
 .filter-chip.sort-chip.active { background: var(--gold2); color: #0D0D0D; border-color: var(--gold2); }
@@ -640,7 +640,7 @@ textarea { resize: vertical; min-height: 80px; }
   border-radius: 20px;
   border: 1.5px solid var(--border);
   background: var(--bg3);
-  color: var(--text);
+  color: var(--text2);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
@@ -695,7 +695,7 @@ textarea { resize: vertical; min-height: 80px; }
   cursor: pointer;
   transition: background 0.15s;
   font-size: 0.87rem;
-  color: var(--text);
+  color: var(--text2);
   user-select: none;
 }
 .cat-option:hover { background: rgba(255,255,255,0.05); }
@@ -784,7 +784,7 @@ textarea { resize: vertical; min-height: 80px; }
   font-family: 'Plus Jakarta Sans', sans-serif;
   transition: all 0.18s;
 }
-.cat-toggle:hover { border-color: rgba(166,190,96,0.4); color: var(--text); }
+.cat-toggle:hover { border-color: rgba(166,190,96,0.4); color: var(--text2); }
 .cat-toggle.selected { background: rgba(166,190,96,0.15); color: var(--gold); border-color: rgba(166,190,96,0.5); }
 
 /* ── Restaurant image upload (manage panel) ── */
@@ -815,23 +815,23 @@ textarea { resize: vertical; min-height: 80px; }
 .menu-section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 .menu-item-card { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; transition: border-color 0.2s; }
 .menu-item-card:hover { border-color: rgba(166,190,96,0.2); }
-.menu-item-info .item-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.menu-item-info .item-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; color: #F5F0E8; }
 .menu-item-info .item-desc { font-size: 0.8rem; color: var(--muted); }
 .menu-item-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 .item-price { font-weight: 700; color: var(--gold); font-size: 1.05rem; }
 
 .customer-layout { display: grid; grid-template-columns: 1fr 340px; gap: 24px; align-items: start; }
 .cart-sidebar { position: sticky; top: 80px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
-.cart-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+.cart-title { color: #F5F0E8; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
 .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
 .cart-item:last-child { border-bottom: none; }
-.cart-item-name { font-size: 0.88rem; font-weight: 600; margin-bottom: 2px; }
+.cart-item-name { font-size: 0.88rem; font-weight: 600; margin-bottom: 2px; color: #F5F0E8; }
 .cart-item-price { font-size: 0.78rem; color: var(--muted); }
 .qty-control { display: flex; align-items: center; gap: 8px; }
-.qty-btn { width: 28px; height: 28px; border-radius: 7px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.qty-btn { width: 28px; height: 28px; border-radius: 7px; background: var(--bg3); border: 1px solid var(--border); color: var(--text2); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
 .qty-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
-.qty-num { font-size: 0.9rem; font-weight: 700; min-width: 20px; text-align: center; }
-.cart-total { display: flex; justify-content: space-between; padding: 14px 0 0; font-weight: 700; font-size: 1.05rem; }
+.qty-num { font-size: 0.9rem; font-weight: 700; min-width: 20px; text-align: center; color: #F5F0E8; }
+.cart-total { display: flex; justify-content: space-between; padding: 14px 0 0; font-weight: 700; font-size: 1.05rem; color: #F5F0E8; }
 .cart-total .amount { color: var(--gold); }
 
 .order-row { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; margin-bottom: 12px; transition: border-color 0.2s; }
@@ -860,7 +860,7 @@ textarea { resize: vertical; min-height: 80px; }
 .mmc-price { font-weight: 700; color: var(--gold); }
 
 .payment-options { display: flex; flex-direction: column; gap: 10px; }
-.payment-option { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--bg3); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.2s; }
+.payment-option { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--bg3); border: 1.5px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.2s; color: var(--text2); }
 .payment-option:hover { border-color: rgba(166,190,96,0.4); }
 .payment-option.selected { border-color: var(--gold); background: rgba(166,190,96,0.08); }
 .payment-option .icon { font-size: 1.3rem; }
@@ -876,7 +876,7 @@ textarea { resize: vertical; min-height: 80px; }
 .driver-status-indicator.available { background: var(--green); box-shadow: 0 0 0 3px rgba(76,175,120,0.25); }
 .driver-status-indicator.busy { background: var(--gold); box-shadow: 0 0 0 3px rgba(166,190,96,0.25); }
 .driver-status-indicator.offline { background: var(--muted); box-shadow: 0 0 0 3px rgba(122,115,107,0.15); }
-.driver-status-label { font-weight: 600; font-size: 0.9rem; }
+.driver-status-label { font-weight: 600; font-size: 0.9rem; color: #F5F0E8;}
 .driver-status-sub   { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 
 .driver-assignment-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 12px; transition: border-color 0.2s; }
@@ -904,7 +904,7 @@ textarea { resize: vertical; min-height: 80px; }
 .bar-fill { width: 100%; border-radius: 4px 4px 0 0; background: linear-gradient(180deg, var(--gold), var(--gold2)); min-height: 3px; }
 .bar-label { font-size: 0.58rem; color: var(--muted); margin-top: 4px; text-align: center; }
 .donut-wrap { display: flex; align-items: center; justify-content: center; gap: 20px; }
-.donut-legend { display: flex; flex-direction: column; gap: 8px; }
+.donut-legend { display: flex; flex-direction: column; gap: 8px; color: #F5F0E8;}
 .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; }
 .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 .driver-perf-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
@@ -922,11 +922,11 @@ textarea { resize: vertical; min-height: 80px; }
 .zone-svg-label { font-size: 11px; fill: #7A736B; font-family: 'Plus Jakarta Sans',sans-serif; pointer-events: none; font-weight: 600; }
 .zone-svg-label.active { fill: #A6BE60; }
 .building-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-height: 150px; overflow-y: auto; margin-bottom: 12px; }
-.building-btn { padding: 8px 12px; background: var(--bg3); border: 1.5px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: left; }
+.building-btn { padding: 8px 12px; background: var(--bg3); border: 1.5px solid var(--border); border-radius: 8px; color: var(--text2); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: left; }
 .building-btn:hover  { border-color: rgba(166,190,96,0.4); }
 .building-btn.active { border-color: var(--gold); background: rgba(166,190,96,0.1); color: var(--gold); }
 .addr-preview { background: var(--bg3); border-radius: 10px; padding: 10px 14px; font-size: 0.83rem; color: var(--muted); margin-bottom: 12px; min-height: 38px; }
-.addr-preview strong { color: var(--text); }
+.addr-preview strong { color: var(--text2); }
 #driver-zone-group { display: none; }
 
 /* ════════════════════════════════════════
@@ -966,9 +966,9 @@ textarea { resize: vertical; min-height: 80px; }
   </div>
 
   <div class="modal-overlay" id="modal-checkout">
-    <div class="modal" style="max-width:520px; background: rgba(13, 13, 13, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+    <div class="modal" style="max-width:520px; background: rgba(59, 58, 56, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
       <div class="modal-header">
-        <div><h3>Checkout</h3><p class="text-muted text-sm mt-sm">Complete your order</p></div>
+        <div><h3 style="color: var(--text2);">Checkout</h3><p class="text-muted text-sm mt-sm">Complete your order</p></div>
         <button class="modal-close" onclick="closeModal('modal-checkout')">✕</button>
       </div>
       <div id="checkout-summary" style="margin-bottom:20px;"></div>
@@ -1418,14 +1418,6 @@ textarea { resize: vertical; min-height: 80px; }
       </div>
       <div class="addr-preview" id="addr-preview">Select a zone on the map to begin.</div>
       <button class="btn btn-gold btn-lg" style="width:100%" onclick="confirmMapAddress()" id="btn-confirm-addr" disabled>Confirm Address</button>
-      <div class="divider" style="margin-top:18px"></div>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px">
-        <span class="text-muted text-sm">📌 Custom map background</span>
-        <label class="btn btn-ghost btn-sm" style="cursor:pointer;position:relative">
-          Upload PNG
-          <input type="file" accept="image/png" style="position:absolute;inset:0;opacity:0;cursor:pointer" onchange="uploadMapPng(this)">
-        </label>
-      </div>
     </div>
   </div>
 
@@ -1873,7 +1865,7 @@ function renderRestaurantGrid() {
           </div>
           <div class="rest-card-footer">
             ${ratingHtml}
-            <span style="font-size:0.8rem;color:var(--muted)">View Menu →</span>
+            <span style="font-size:0.8rem;color:#F5F0E8;opacity:0.7">View Menu →</span>
           </div>
         </div>
       </div>`;
@@ -1998,17 +1990,17 @@ function openCheckout() {
   document.getElementById('checkout-summary').innerHTML = `
     <div style="background:var(--bg3);border-radius:10px;padding:16px">
       <div class="section-title">Order Summary</div>
-      ${cartItems.map(i=>`<div class="flex-between" style="margin-bottom:8px;font-size:0.88rem">
+      ${cartItems.map(i=>`<div class="flex-between" style="margin-bottom:8px;font-size:0.88rem;color:#F5F0E8">
         <span>${i.name} × ${i.qty}</span><span class="text-gold">INR ${(i.qty*i.price).toFixed(2)}</span>
       </div>`).join('')}
       <div class="divider"></div>
-      <div class="flex-between" style="font-size:0.88rem;margin-bottom:6px">
+      <div class="flex-between" style="font-size:0.88rem;margin-bottom:6px;color:#8A7D6A">
         <span>Food subtotal</span><span>INR ${foodTotal.toFixed(2)}</span>
       </div>
       <div class="flex-between" style="font-size:0.88rem;margin-bottom:10px;color:var(--muted)">
         <span>Delivery charge <span style="font-size:0.75rem">${chargeNote}</span></span><span>INR ${charge.toFixed(3)}</span>
       </div>
-      <div class="flex-between"><strong>Grand Total</strong><strong class="text-gold">INR ${grandTotal.toFixed(2)}</strong></div>
+      <div class="flex-between" style="color:#F5F0E8"><strong>Grand Total</strong><strong class="text-gold">INR ${grandTotal.toFixed(2)}</strong></div>
     </div>`;
   openModal('modal-checkout');
 }
@@ -2065,7 +2057,7 @@ async function loadOrderHistory() {
     <div class="order-row">
       <div class="order-row-header">
         <div>
-          <span style="font-weight:700;font-size:0.95rem">${o.restaurant}</span>
+          <span class="rest-card-name">${o.restaurant}</span>
           <span class="badge ${statusCls}">${statusLbl}</span>
           ${payBadge}
         </div>
@@ -2172,7 +2164,7 @@ async function loadManageMenu() {
   container.innerHTML = '<div class="empty-state"><div class="spinner"></div></div>';
   const items = await api('/api/restaurant/menu');
   const classIcons = { Appetizer:'', Main:'', Dessert:'', Drink:'' };
-  if (!items.length) { container.innerHTML = '<div class="empty-state"><div class="icon">📋</div><p>No items yet. Add your first dish!</p></div>'; return; }
+  if (!items.length) { container.innerHTML = '<div class="empty-state"><p>No items yet. Add your first dish!</p></div>'; return; }
   const grouped = {};
   items.forEach(i => { if (!grouped[i.class]) grouped[i.class] = []; grouped[i.class].push(i); });
   container.innerHTML = Object.entries(grouped).map(([cls, its]) => `
@@ -2350,7 +2342,7 @@ function initDriverDashboard(driverStatus) {
     loadDriverStats();
     // Show offline placeholder without hitting the orders endpoint
     const container = document.getElementById('driver-orders-container');
-    if (container) container.innerHTML = `<div class="empty-state"><div class="icon">🛵</div><p>You are offline</p></div>`;
+    if (container) container.innerHTML = `<div class="empty-state"><p>You are offline</p></div>`;
   }
 }
 
@@ -2397,7 +2389,7 @@ async function loadDriverOrders() {
     const cashConfirmed = o.cash_collected === 1;
     const payInfo = isInPerson
       ? `<div style="margin:8px 0;padding:10px 14px;background:rgba(166,190,96,0.1);border:1px solid rgba(166,190,96,0.35);border-radius:8px;display:flex;justify-content:space-between;align-items:center">
-           <span> <strong>Pay in Person</strong> — collect <span class="text-gold" style="font-weight:700">INR ${o.total.toFixed(2)}</span> from customer</span>
+           <span style="color:#F5F0E8;"> <strong>Pay in Person</strong> — collect <span class="text-gold" style="font-weight:700">INR ${o.total.toFixed(2)}</span> from customer</span>
            ${cashConfirmed
              ? '<span style="color:#4caf50;font-weight:600">✓ Cash received</span>'
              : `<button class="btn btn-gold btn-sm" onclick="driverConfirmCash(${o.id}, this)"> Confirm Cash</button>`}
@@ -2408,7 +2400,7 @@ async function loadDriverOrders() {
         <span class="dac-id">Order #${o.id}</span>
         <span class="badge ${isReady ? 'badge-green' : 'badge-gold'}">${isReady ? '✓ Ready for pickup' : ' Being prepared'}</span>
       </div>
-      <div class="dac-route"><span><strong>${o.restaurant}</strong></span><span class="dac-route-arrow">→</span><span>${o.customer}</span></div>
+      <div class="dac-route"><span style="color:#F5F0E8;"><strong>${o.restaurant}</strong></span><span class="dac-route-arrow">→</span><span style="color:#F5F0E8;">${o.customer}</span></div>
       <div class="dac-items">${o.food}</div>
       ${payInfo}
       <div class="dac-footer">
@@ -2514,10 +2506,10 @@ async function loadAnalytics() {
     </div>`;
   const itemsEl = document.getElementById('analytics-items');
   if (!data.top_items.length) itemsEl.innerHTML = '<p class="text-muted text-sm">No completed orders yet</p>';
-  else itemsEl.innerHTML = data.top_items.map((it,i) => `<div class="driver-perf-row"><div><span style="color:var(--gold);font-weight:700;margin-right:8px">#${i+1}</span>${it.name}</div><span class="badge badge-gold">${it.count}×</span></div>`).join('');
+  else itemsEl.innerHTML = data.top_items.map((it,i) => `<div class="driver-perf-row"><div style="color:#F5F0E8;"><span style="color:var(--gold);font-weight:700;margin-right:8px">#${i+1}</span>${it.name}</div><span class="badge badge-gold">${it.count}×</span></div>`).join('');
   const drvEl = document.getElementById('analytics-drivers');
   if (!data.drivers.length) drvEl.innerHTML = '<p class="text-muted text-sm">No deliveries yet</p>';
-  else drvEl.innerHTML = data.drivers.map(d => `<div class="driver-perf-row"><div><div style="font-weight:600">${d.name}</div><div class="text-muted text-sm">${d.zone} zone</div></div><div style="text-align:right"><div class="text-gold" style="font-weight:700">${d.deliveries} deliveries</div><div class="text-muted text-sm">${d.avg_min > 0 ? d.avg_min + ' min avg' : '—'}</div></div></div>`).join('');
+  else drvEl.innerHTML = data.drivers.map(d => `<div class="driver-perf-row"><div><div style="font-weight:600;color:#F5F0E8;">${d.name}</div><div style="font-weight:300;color:#F5F0E8;">${d.zone} zone</div></div><div style="text-align:right"><div class="text-gold" style="font-weight:700">${d.deliveries} deliveries</div><div class="text-muted text-sm">${d.avg_min > 0 ? d.avg_min + ' min avg' : '—'}</div></div></div>`).join('');
 }
 
 /* ═══════════════════════════════════════════════
